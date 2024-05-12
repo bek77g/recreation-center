@@ -1,0 +1,11 @@
+{
+	"Navigation": {
+		"home": "Башкы",
+		"healing": "Дарылоо",
+		"about": "Биз жөнүндө",
+		"contacts": "Байланыш"
+	},
+	"Header": {
+		"reserveButton": "Бөлмө ээлөө"
+	}
+}

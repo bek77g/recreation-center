@@ -1,0 +1,11 @@
+{
+	"Navigation": {
+		"home": "Home",
+		"healing": "Healing",
+		"about": "About",
+		"contacts": "Contact"
+	},
+	"Header": {
+		"reserveButton": "Reserve a room"
+	}
+}

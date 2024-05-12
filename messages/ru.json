@@ -1,0 +1,11 @@
+{
+	"Navigation": {
+		"home": "Главная",
+		"healing": "Лечение",
+		"about": "О нас",
+		"contacts": "Контакты"
+	},
+	"Header": {
+		"reserveButton": "Забронировать номер"
+	}
+}
