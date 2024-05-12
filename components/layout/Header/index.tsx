@@ -1,5 +1,6 @@
 'use client';
 import { Logo } from '@/components/ui';
+import { ROUTES } from '@/constants/links.constants';
 import { useWindowWidth } from '@/hooks';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -11,19 +12,19 @@ interface IHeader {}
 const navigation = [
 	{
 		title: 'Navigation.home',
-		href: '#',
+		href: ROUTES.home,
 	},
 	{
 		title: 'Navigation.healing',
-		href: '#',
+		href: ROUTES.healing,
 	},
 	{
 		title: 'Navigation.about',
-		href: '#',
+		href: ROUTES.about,
 	},
 	{
 		title: 'Navigation.contacts',
-		href: '#',
+		href: ROUTES.contacts,
 	},
 ];
 

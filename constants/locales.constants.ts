@@ -1,1 +1,1 @@
-export const LOCALES = ['ru', 'ky', 'en'] as const;
+export const LOCALES: readonly string[] = ['ru', 'ky', 'en'];
