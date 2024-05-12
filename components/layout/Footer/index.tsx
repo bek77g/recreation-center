@@ -46,12 +46,12 @@ const contacts: { value: string; type: 'tel' | 'mailto' }[] = [
 
 const socials: { icon: any; href: string; label: string }[] = [
 	{
-		icon: Facebook,
+		icon: <Facebook />,
 		href: 'https://facebook.com',
 		label: '/name.kg',
 	},
 	{
-		icon: Instagram,
+		icon: <Instagram />,
 		href: 'https://instagram.com',
 		label: 'name.kg',
 	},
@@ -61,11 +61,13 @@ export function Footer({}: IFooter) {
 	const t = useTranslations();
 
 	return (
-		<footer className='container'>
-			<div className='grid grid-cols-4 justify-center gap-16'>
+		<footer className='bg-[#2a2a2a] text-white pt-14 pb-10'>
+			<div className='container grid grid-cols-4 justify-center gap-16'>
 				<div>
-					<Logo />
-					<ul>
+					<h3 className='mb-6'>
+						<Logo />
+					</h3>
+					<ul className='flex flex-col gap-y-2'>
 						{navigation.map(item => (
 							<li key={item.name}>
 								<Link href={item.href}>{t(item.title)}</Link>
@@ -74,12 +76,16 @@ export function Footer({}: IFooter) {
 					</ul>
 				</div>
 				<div>
-					<h3 className='font-playfair text-6'>{t('Footer.address.title')}</h3>
-					<p className='text-4 font-semibold'>{t('Footer.address.text')}</p>
+					<h3 className='font-playfair text-[24px] mb-6'>
+						{t('Footer.address.title')}
+					</h3>
+					<p className='text-4'>{t('Footer.address.text')}</p>
 				</div>
 				<div>
-					<h3>{t('Footer.contacts.title')}</h3>
-					<ul>
+					<h3 className='font-playfair text-[24px] mb-6'>
+						{t('Footer.contacts.title')}
+					</h3>
+					<ul className='flex flex-col gap-y-4'>
 						{contacts.map(item => (
 							<li key={item.value}>
 								<a href={`${item.type}:${item.value}`}>{item.value}</a>
@@ -88,16 +94,19 @@ export function Footer({}: IFooter) {
 					</ul>
 				</div>
 				<div>
-					<h3>{t('Footer.socials.title')}</h3>
-					<ul>
+					<h3 className='font-playfair text-[24px] mb-6'>
+						{t('Footer.socials.title')}
+					</h3>
+					<ul className='flex flex-col gap-y-4'>
 						{socials.map(social => (
-							<li key={social.href}>
-								<a href={social.href}>{social.label}</a>
+							<li key={social.href} className='flex items-center gap-2'>
+								{social.icon} <a href={social.href}>{social.label}</a>
 							</li>
 						))}
 					</ul>
 				</div>
 			</div>
+			<p className='container text-[#909090] mt-8'>{t('Footer.copyright')}</p>
 		</footer>
 	);
 }
