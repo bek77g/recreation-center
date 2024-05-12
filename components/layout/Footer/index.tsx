@@ -62,7 +62,7 @@ export function Footer({}: IFooter) {
 
 	return (
 		<footer className='bg-[#2a2a2a] text-white pt-14 pb-10'>
-			<div className='container grid grid-cols-4 justify-center gap-16'>
+			<div className='container grid text-center sm:text-left grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center gap-16'>
 				<div>
 					<h3 className='mb-6'>
 						<Logo />
