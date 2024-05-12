@@ -74,9 +74,7 @@ export function Footer({}: IFooter) {
 					</ul>
 				</div>
 				<div>
-					<h3 className='font-[var(--second-family)] text-6'>
-						{t('Footer.address.title')}
-					</h3>
+					<h3 className='font-playfair text-6'>{t('Footer.address.title')}</h3>
 					<p className='text-4 font-semibold'>{t('Footer.address.text')}</p>
 				</div>
 				<div>
