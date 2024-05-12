@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 interface IHeader {}
 
-const navigation = [
+const navigation: { title: string; href: string }[] = [
 	{
 		title: 'Navigation.home',
 		href: ROUTES.home,

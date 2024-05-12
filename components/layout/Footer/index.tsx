@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 
 interface IFooter {}
 
-const navigation = [
+const navigation: { title: string; href: string }[] = [
 	{
 		title: 'Navigation.home',
 		href: ROUTES.home,
