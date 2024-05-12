@@ -45,8 +45,8 @@ export function Header({}: IHeader) {
 	};
 
 	return (
-		<header className='relative container pt-4'>
-			<div className='flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]'>
+		<header className='relative pt-4'>
+			<div className='container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]'>
 				<div className='relative z-10'>
 					<Logo />
 				</div>
