@@ -7,5 +7,17 @@
 	},
 	"Header": {
 		"reserveButton": "Reserve a room"
+	},
+	"Footer": {
+		"address": {
+			"title": "Address",
+			"text": "Turkestan region, city of Turkestan 157th quarter, building number 037"
+		},
+		"contacts": {
+			"title": "Contacts"
+		},
+		"socials": {
+			"title": "Social networks"
+		}
 	}
 }
