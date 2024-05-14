@@ -8,6 +8,9 @@
 	"Header": {
 		"reserveButton": "Забронировать номер"
 	},
+	"Floating": {
+		"whatsapp": "Написать сообщение"
+	},
 	"Footer": {
 		"address": {
 			"title": "Адрес",

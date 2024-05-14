@@ -1,5 +1,4 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import './globals.css';
 
 export default async function RootLayout({
@@ -9,15 +8,5 @@ export default async function RootLayout({
 	children: React.ReactNode;
 	params: { locale: string };
 }) {
-	const messages = await getMessages();
-
-	return (
-		<html lang={locale}>
-			<body>
-				<NextIntlClientProvider messages={messages}>
-					{children}
-				</NextIntlClientProvider>
-			</body>
-		</html>
-	);
+	return <AntdRegistry>{children}</AntdRegistry>;
 }

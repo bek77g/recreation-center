@@ -1,11 +1,12 @@
-import { LOCALES } from '@/constants/locales.constants';
+import { localePrefix, LOCALES } from '@/lib/navigation';
 import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
-	locales: LOCALES,
 	defaultLocale: LOCALES[0],
+	defaultPrefix: localePrefix,
+	locales: LOCALES,
 });
 
 export const config = {
-	matcher: ['/', '/(ky|ru|en)/:path*'],
+	matcher: ['/((?!api|_next|.*\\..*).*)'],
 };

@@ -8,6 +8,9 @@
 	"Header": {
 		"reserveButton": "Бөлмө ээлөө"
 	},
+	"Floating": {
+		"whatsapp": "Кат жазуу"
+	},
 	"Footer": {
 		"address": {
 			"title": "Жайгашуу",

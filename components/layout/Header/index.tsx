@@ -1,4 +1,5 @@
 'use client';
+import { LanguageSelector } from '@/components/shared';
 import { Logo } from '@/components/ui';
 import { ROUTES } from '@/constants/links.constants';
 import { useWindowWidth } from '@/hooks';
@@ -9,25 +10,6 @@ import { useState } from 'react';
 
 interface IHeader {}
 
-const navigation: { title: string; href: string }[] = [
-	{
-		title: 'Navigation.home',
-		href: ROUTES.home,
-	},
-	{
-		title: 'Navigation.healing',
-		href: ROUTES.healing,
-	},
-	{
-		title: 'Navigation.about',
-		href: ROUTES.about,
-	},
-	{
-		title: 'Navigation.contacts',
-		href: ROUTES.contacts,
-	},
-];
-
 export function Header({}: IHeader) {
 	const t = useTranslations();
 	const [isCollapsed, setIsCollapsed] = useState(true);
@@ -35,7 +17,7 @@ export function Header({}: IHeader) {
 
 	const isTablet = windowWidth <= 796;
 	const navClassName = isTablet
-		? `absolute flex justify-center items-center top-0 ${
+		? `absolute flex flex-col justify-center gap-12 text-white items-center top-0 ${
 				isCollapsed ? 'left-[200%]' : 'left-0'
 		  }  w-full h-dvh bg-[#02345a94]`
 		: '';
@@ -43,6 +25,25 @@ export function Header({}: IHeader) {
 	const handleCollapse = () => {
 		setIsCollapsed(prev => !prev);
 	};
+
+	const navigation: { title: string; href: string }[] = [
+		{
+			title: 'home',
+			href: ROUTES.home,
+		},
+		{
+			title: 'healing',
+			href: ROUTES.healing,
+		},
+		{
+			title: 'about',
+			href: ROUTES.about,
+		},
+		{
+			title: 'contacts',
+			href: ROUTES.contacts,
+		},
+	];
 
 	return (
 		<header className='relative pt-4'>
@@ -57,14 +58,15 @@ export function Header({}: IHeader) {
 						}`}>
 						{navigation.map(item => (
 							<li
-								key={item.name}
+								key={item.title}
 								className={`font-semibold text-center ${
 									isTablet ? '[font-size:_clamp(18px,5vw,24px)]' : ''
 								}`}>
-								<Link href={item.href}>{t(item.title)}</Link>
+								<Link href={item.href}>{t(`Navigation.${item.title}`)}</Link>
 							</li>
 						))}
 					</ul>
+					{isTablet ? <LanguageSelector /> : null}
 				</nav>
 				{isTablet ? (
 					<div onClick={handleCollapse} className='relative z-10'>
@@ -75,9 +77,14 @@ export function Header({}: IHeader) {
 						)}
 					</div>
 				) : (
-					<button className='rounded-3xl py-[10px] px-[30px] font-medium bg-gradient-to-r hover:bg-gradient-to-l from-blue-900 to-blue-950 text-white'>
-						{t('Header.reserveButton')}
-					</button>
+					<>
+						<div className='flex gap-2 items-center'>
+							{!isTablet ? <LanguageSelector /> : null}
+							<button className='rounded-3xl py-[10px] px-[30px] font-medium bg-gradient-to-r hover:bg-gradient-to-l from-blue-900 to-blue-950 text-white'>
+								{t('Header.reserveButton')}
+							</button>
+						</div>
+					</>
 				)}
 			</div>
 		</header>

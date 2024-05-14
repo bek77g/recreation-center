@@ -8,6 +8,9 @@
 	"Header": {
 		"reserveButton": "Reserve a room"
 	},
+	"Floating": {
+		"whatsapp": "Write the message"
+	},
 	"Footer": {
 		"address": {
 			"title": "Address",

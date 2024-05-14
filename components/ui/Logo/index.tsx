@@ -1,6 +1,6 @@
 export function Logo() {
 	return (
-		<div className='flex items-center font-bold gap-2'>
+		<div className='flex items-center font-bold gap-2 w-fit'>
 			<svg
 				width='35'
 				height='51'
@@ -177,9 +177,9 @@ export function Logo() {
 					</linearGradient>
 				</defs>
 			</svg>
-			<h2 className='flex flex-col gap-0 text-md'>
-				<span>Алтын</span>
-				<span>Тоо</span>
+			<h2 className='flex flex-col gap-0'>
+				<span className='text-sm'>Санаторий</span>
+				<span className='text-md'>Алтын Тоо</span>
 			</h2>
 		</div>
 	);
