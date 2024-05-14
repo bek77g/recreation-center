@@ -23,5 +23,18 @@
 			"title": "Social networks"
 		},
 		"copyright": "© 2022 recreation-center. All rights reserved."
+	},
+	"Sections": {
+		"intro": {
+			"title": "Welcome to the recreation center",
+			"form": {
+				"quests": "Guests",
+				"phone": "Phone number",
+				"notes": "Notes",
+				"dateIn": "Arrival date",
+				"dateOut": "Departure date",
+				"reserve": "Reserve"
+			}
+		}
 	}
 }

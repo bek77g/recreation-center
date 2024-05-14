@@ -19,7 +19,7 @@ export function Header({}: IHeader) {
 	const navClassName = isTablet
 		? `absolute flex flex-col justify-center gap-12 text-white items-center top-0 ${
 				isCollapsed ? 'left-[200%]' : 'left-0'
-		  }  w-full h-dvh bg-[#02345a94]`
+		  }  w-full h-dvh bg-[#02345a98]`
 		: '';
 
 	const handleCollapse = () => {
