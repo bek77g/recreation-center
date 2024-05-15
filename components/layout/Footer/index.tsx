@@ -69,7 +69,7 @@ export function Footer({}: IFooter) {
 					</h3>
 					<ul className='flex flex-col gap-y-2'>
 						{navigation.map(item => (
-							<li key={item.name}>
+							<li key={item.href}>
 								<Link href={item.href}>{t(item.title)}</Link>
 							</li>
 						))}

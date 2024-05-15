@@ -13,6 +13,7 @@ interface IHeader {}
 export function Header({}: IHeader) {
 	const t = useTranslations();
 	const [isCollapsed, setIsCollapsed] = useState(true);
+	const [isTablet, setIsTablet] = useState(false);
 	const [isSticky, setIsSticky] = useState(false);
 	const windowWidth = useWindowWidth();
 	const scrollDirection = useScrollDirection();
@@ -20,6 +21,10 @@ export function Header({}: IHeader) {
 	useEffect(() => {
 		setIsSticky(window.scrollY >= 130);
 	}, []);
+
+	useEffect(() => {
+		setIsTablet(windowWidth <= 796);
+	}, [windowWidth]);
 
 	useEffect(() => {
 		const isSticky = (e: Event) => {
@@ -34,9 +39,8 @@ export function Header({}: IHeader) {
 		};
 	});
 
-	const isTablet = windowWidth <= 796;
 	const navClassName = isTablet
-		? `transition-all duration-300 absolute flex flex-col justify-center gap-12 items-center top-0 ${
+		? `transition-all duration-300 absolute flex flex-col justify-center gap-12 items-center top-0  backdrop-blur-sm ${
 				isCollapsed ? 'left-[200%]' : 'left-0'
 		  }  w-full h-dvh bg-[#02345a98]`
 		: '';
@@ -69,7 +73,7 @@ export function Header({}: IHeader) {
 	return (
 		<header
 			className={`transition-colors duration-300 fixed top-0 left-0 right-0 py-4 z-50 ${
-				!isSticky ? 'text-white' : 'bg-white text-black'
+				!isSticky || !isCollapsed ? 'text-white' : 'bg-white text-black'
 			}`}>
 			<div className='container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]'>
 				<div className='relative z-10'>
@@ -77,8 +81,8 @@ export function Header({}: IHeader) {
 				</div>
 				<nav className={navClassName}>
 					<ul
-						className={`flex gap-x-12 gap-y-8 flex-wrap ${
-							isTablet ? 'flex-col' : ''
+						className={`flex justify-center gap-x-12 gap-y-3 flex-wrap ${
+							isTablet ? 'flex-col text-white' : 'gap-y-8'
 						}`}>
 						{navigation.map(item => (
 							<li
@@ -93,11 +97,17 @@ export function Header({}: IHeader) {
 					{isTablet ? <LanguageSelector /> : null}
 				</nav>
 				{isTablet ? (
-					<div onClick={handleCollapse} className='relative z-10'>
+					<div onClick={handleCollapse} className='relative z-10 select-none'>
 						{isCollapsed ? (
-							<Menu size={36} color='#fff' />
+							<Menu
+								size={36}
+								color={isSticky && isCollapsed ? 'black' : 'white'}
+							/>
 						) : (
-							<X size={36} color='#fff' />
+							<X
+								size={36}
+								color={isSticky && isCollapsed ? 'black' : 'white'}
+							/>
 						)}
 					</div>
 				) : (
