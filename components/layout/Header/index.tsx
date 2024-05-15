@@ -2,7 +2,7 @@
 import { LanguageSelector } from '@/components/shared';
 import { Logo } from '@/components/ui';
 import { ROUTES } from '@/constants/links.constants';
-import { useWindowWidth } from '@/hooks';
+import { useScrollDirection, useWindowWidth } from '@/hooks';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -15,6 +15,7 @@ export function Header({}: IHeader) {
 	const [isCollapsed, setIsCollapsed] = useState(true);
 	const [isSticky, setIsSticky] = useState(false);
 	const windowWidth = useWindowWidth();
+	const scrollDirection = useScrollDirection();
 
 	useEffect(() => {
 		const isSticky = () => {
@@ -33,6 +34,8 @@ export function Header({}: IHeader) {
 				isCollapsed ? 'left-[200%]' : 'left-0'
 		  }  w-full h-dvh bg-[#02345a98]`
 		: '';
+
+	const isMoveUp = scrollDirection === 'up';
 
 	const handleCollapse = () => {
 		setIsCollapsed(prev => !prev);
