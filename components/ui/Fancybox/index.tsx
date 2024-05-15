@@ -21,5 +21,9 @@ export function Fancybox(props) {
 		};
 	});
 
-	return <div ref={containerRef}>{props.children}</div>;
+	return (
+		<div ref={containerRef} className={props.className}>
+			{props.children}
+		</div>
+	);
 }
