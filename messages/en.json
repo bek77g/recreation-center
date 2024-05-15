@@ -26,7 +26,7 @@
 	},
 	"Sections": {
 		"intro": {
-			"title": "Welcome to the recreation center",
+			"title": "Welcome to the Issyk-Kol",
 			"form": {
 				"quests": "Guests",
 				"phone": "Phone number",
@@ -39,7 +39,7 @@
 		"about": {
 			"title": "Rest and wellness in healing waters",
 			"suptitle": "A little bit about us",
-			"description": "The sanatorium \"Altyn Too\" is a paradise among the desert area of Turkestan. Locals often call this area an Oasis and dream of swimming in a luxurious pool. What can we say about the local mineral water, which has cured more than one thousand satisfied guests. <br><br> Due to the presence of unique natural healing factors and developed infrastructure, the qualified staff of the sanatorium will always find the optimal combination of effective treatment and pleasant rest for you. <br><br> A healthy balanced diet, comfortable living conditions, a wide range of SPA services and services will allow you to get an inexhaustible boost of energy, restore strength and prolong youth."
+			"description": "Issyk-Kul is a true gem of Kyrgyzstan, a lake surrounded by picturesque mountains and cozy resort villages. Local residents proudly call it the largest and most beautiful lake in the country, and it's no wonder. <br><br> Relaxing on the shores of Issyk-Kul will be a true balm for the soul and body. Thanks to its clear and transparent water, perfect for swimming, you can enjoy the freshness and purity of the lake. After all, it's no wonder it's called the pearl of Kyrgyzstan! <br><br> Our service will help you find cozy accommodation in any part of the shore, where you can enjoy picturesque views and the cool mountain breeze. Explore the surroundings, enjoy the warm sand under your feet, and the rich variety of restaurants and cafes offering national and international cuisine."
 		}
 	}
 }

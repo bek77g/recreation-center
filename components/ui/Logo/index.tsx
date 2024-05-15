@@ -178,8 +178,8 @@ export function Logo() {
 				</defs>
 			</svg>
 			<h2 className='flex flex-col gap-0'>
-				<span className='text-sm'>Санаторий</span>
-				<span className='text-md'>Алтын Тоо</span>
+				<span className='text-sm'>Жемчужина</span>
+				<span className='text-md'>Ыссык-Көл</span>
 			</h2>
 		</div>
 	);
