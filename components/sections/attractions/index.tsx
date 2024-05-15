@@ -21,6 +21,7 @@ export function AttractionsSection() {
 								data-fancybox='attractions'
 								href={attractionOne.src}>
 								<Image
+									alt={attractionOne.src}
 									src={attractionOne.src}
 									width='0'
 									height='0'
@@ -44,6 +45,7 @@ export function AttractionsSection() {
 						href={attractionSecond.src}
 						className='inline-block w-full h-full'>
 						<Image
+							alt={attractionSecond.src}
 							src={attractionSecond.src}
 							width='0'
 							height='0'
