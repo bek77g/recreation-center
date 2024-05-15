@@ -1,4 +1,7 @@
 {
+	"Actions": {
+		"more": "More"
+	},
 	"Navigation": {
 		"home": "Home",
 		"healing": "Healing",
@@ -40,6 +43,10 @@
 			"title": "Rest and wellness in healing waters",
 			"suptitle": "A little bit about us",
 			"description": "Issyk-Kul is a true gem of Kyrgyzstan, a lake surrounded by picturesque mountains and cozy resort villages. Local residents proudly call it the largest and most beautiful lake in the country, and it's no wonder. <br><br> Relaxing on the shores of Issyk-Kul will be a true balm for the soul and body. Thanks to its clear and transparent water, perfect for swimming, you can enjoy the freshness and purity of the lake. After all, it's no wonder it's called the pearl of Kyrgyzstan! <br><br> Our service will help you find cozy accommodation in any part of the shore, where you can enjoy picturesque views and the cool mountain breeze. Explore the surroundings, enjoy the warm sand under your feet, and the rich variety of restaurants and cafes offering national and international cuisine."
+		},
+		"attractions": {
+			"title": "Entertainment and attractions",
+			"description": "Our sightseeing opportunities are not limited. Visit interesting places in the region, such as the Tien Shan Mountain range, the Cholpon-Ata resort village and historical monuments of ancient civilizations along the shores of Issyk-Kul. <br><br> Discover the beauty and richness of our region, which combines unique natural sites and rich cultural heritage. Your vacation will be an unforgettable adventure filled with impressions and emotions."
 		}
 	}
 }
