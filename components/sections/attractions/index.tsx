@@ -1,9 +1,9 @@
 import attractionOne from '@/assets/images/attraction-one.jpg';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import attractionSecond from '@/assets/images/attraction-second.jpg';
+import { AnchorLink } from '@/components/shared';
 import { Fancybox } from '@/components/ui';
 
 export function AttractionsSection() {
@@ -34,7 +34,8 @@ export function AttractionsSection() {
 										__html: t.raw('Sections.attractions.description'),
 									}}
 								/>
-								<Link href='/'>{t('Actions.more')}</Link>
+								<br />
+								<AnchorLink href='/'>{t('Actions.more')}</AnchorLink>
 							</div>
 						</div>
 					</article>
