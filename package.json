@@ -12,6 +12,7 @@
     "@ant-design/cssinjs": "^1.20.0",
     "@ant-design/nextjs-registry": "^1.0.0",
     "@clerk/nextjs": "^4.27.4",
+    "@fancyapps/ui": "^5.0.36",
     "@radix-ui/react-slot": "^1.0.2",
     "antd": "^5.17.2",
     "class-variance-authority": "^0.7.0",
