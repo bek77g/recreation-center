@@ -4,8 +4,8 @@ export function WhatsAppFloating({
 	phone = '',
 	text = '',
 }: {
-	phone: string;
-	text: string;
+	phone?: string;
+	text?: string;
 }) {
 	const t = useTranslations('Floating');
 

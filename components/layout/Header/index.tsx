@@ -32,7 +32,7 @@ export function Header({}: IHeader) {
 		return () => {
 			window.removeEventListener('scroll', isSticky);
 		};
-	}, [window.scrollY]);
+	});
 
 	const isTablet = windowWidth <= 796;
 	const navClassName = isTablet

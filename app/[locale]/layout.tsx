@@ -25,7 +25,7 @@ export default async function BaseLayout({
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<Header />
 					<main>{children}</main>
-					<WhatsAppFloating />
+					<WhatsAppFloating text='Здравствуйте' phone='+996701151539' />
 					<Footer />
 				</NextIntlClientProvider>
 			</body>
