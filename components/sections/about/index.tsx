@@ -14,7 +14,7 @@ export function AboutSection() {
 					<h3 className='section-suptitle'>{t('suptitle')}</h3>
 					<h2 className='section-title'>{t('title')}</h2>
 				</div>
-				<article className='grid grid-cols-2 gap-x-10 items-center'>
+				<article className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
 					<p dangerouslySetInnerHTML={{ __html: t.raw('description') }} />
 					<div className='relative'>
 						<Fancybox>
