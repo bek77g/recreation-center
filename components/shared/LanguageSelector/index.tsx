@@ -29,7 +29,9 @@ export const LanguageSelector = () => {
 		const lngPrefixLength = splitPathName[1].length + 1;
 		const transformedPathName = pathname.slice(lngPrefixLength, -1);
 
-		await router.push(`/${language}${transformedPathName}`);
+		await router.push(`/${language}${transformedPathName}`, {
+			scroll: false,
+		});
 		setSelectedLanguage(language);
 	};
 

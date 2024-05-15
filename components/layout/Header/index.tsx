@@ -18,10 +18,17 @@ export function Header({}: IHeader) {
 	const scrollDirection = useScrollDirection();
 
 	useEffect(() => {
+		setIsSticky(window.scrollY >= 130);
+	}, []);
+
+	useEffect(() => {
+		const scrollTop = window.scrollY;
+		const isStickyValue = scrollTop >= 130;
+
 		const isSticky = () => {
-			const scrollTop = window.scrollY;
-			setIsSticky(scrollTop >= 130);
+			setIsSticky(!isStickyValue);
 		};
+
 		window.addEventListener('scroll', isSticky);
 		return () => {
 			window.removeEventListener('scroll', isSticky);
