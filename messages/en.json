@@ -47,6 +47,9 @@
 		"attractions": {
 			"title": "Entertainment and attractions",
 			"description": "Our sightseeing opportunities are not limited. Visit interesting places in the region, such as the Tien Shan Mountain range, the Cholpon-Ata resort village and historical monuments of ancient civilizations along the shores of Issyk-Kul. <br><br> Discover the beauty and richness of our region, which combines unique natural sites and rich cultural heritage. Your vacation will be an unforgettable adventure filled with impressions and emotions."
+		},
+		"Gallery": {
+			"title": "Gallery"
 		}
 	}
 }
