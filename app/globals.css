@@ -44,7 +44,7 @@ a {
 
 @layer base {
 	.section-title {
-		@apply [font-family:_var(--second-family)] [font-size:_clamp(32px,5vw,64px)] font-bold text-[#010101];
+		@apply [font-family:_var(--second-family)] [font-size:_clamp(32px,5vw,64px)] font-bold text-[#010101] leading-none mt-2 mb-8;
 	}
 	.section-suptitle {
 		@apply [font-family:_var(--font-family)] [font-size:_clamp(18px,5vw,20px)] text-[#707070];
