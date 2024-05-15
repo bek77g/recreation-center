@@ -41,3 +41,12 @@ a {
 	width: 100%;
 	margin: 0 auto;
 }
+
+@layer base {
+	.section-title {
+		@apply [font-family:_var(--second-family)] [font-size:_clamp(32px,5vw,64px)] font-bold text-[#010101];
+	}
+	.section-suptitle {
+		@apply [font-family:_var(--font-family)] [font-size:_clamp(18px,5vw,20px)] text-[#707070];
+	}
+}
