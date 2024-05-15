@@ -12,7 +12,7 @@ export function WhatsAppFloating({
 	return (
 		<a
 			href={`https://wa.me/${phone}?text=${text}`}
-			className='cursor-pointer bg-white/30 hover:backdrop-blur-xl backdrop-blur flex items-center gap-3 py-2 px-4 fixed right-0 bottom-10 rounded-l-full'>
+			className='cursor-pointer bg-black/30 hover:backdrop-blur-xl backdrop-blur flex items-center gap-3 py-2 px-4 fixed right-0 bottom-10 rounded-l-full'>
 			<svg
 				width='36'
 				height='36'
