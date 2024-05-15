@@ -6,14 +6,26 @@ import { useWindowWidth } from '@/hooks';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface IHeader {}
 
 export function Header({}: IHeader) {
 	const t = useTranslations();
 	const [isCollapsed, setIsCollapsed] = useState(true);
+	const [isSticky, setIsSticky] = useState(false);
 	const windowWidth = useWindowWidth();
+
+	useEffect(() => {
+		const isSticky = () => {
+			const scrollTop = window.scrollY;
+			setIsSticky(scrollTop >= 130);
+		};
+		window.addEventListener('scroll', isSticky);
+		return () => {
+			window.removeEventListener('scroll', isSticky);
+		};
+	});
 
 	const isTablet = windowWidth <= 796;
 	const navClassName = isTablet
@@ -46,7 +58,10 @@ export function Header({}: IHeader) {
 	];
 
 	return (
-		<header className='fixed top-0 left-0 right-0 py-4 text-white'>
+		<header
+			className={`fixed top-0 left-0 right-0 py-4 ${
+				!isSticky ? 'text-white' : 'bg-white text-black'
+			}`}>
 			<div className='container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]'>
 				<div className='relative z-10'>
 					<Logo />

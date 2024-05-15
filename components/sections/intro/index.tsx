@@ -1,11 +1,15 @@
 import { Form, Input } from 'antd';
 import { useTranslations } from 'next-intl';
 
+import bgIntro from '@/assets/images/bgIntro.png';
+
 export function IntroSection() {
 	const t = useTranslations('Sections.intro');
 
 	return (
-		<section className='h-screen w-full bg-[#02345a98]'>
+		<section
+			className='h-screen w-full bg-[#02345a98]'
+			style={{ backgroundImage: `url(${bgIntro.src})` }}>
 			<div className='container h-full flex flex-col justify-center items-center'>
 				<div className='flex flex-col items-center gap-6'>
 					<h2 className='text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)]'>
