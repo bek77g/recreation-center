@@ -22,18 +22,17 @@ export function Header({}: IHeader) {
 	}, []);
 
 	useEffect(() => {
-		const scrollTop = window.scrollY;
-		const isStickyValue = scrollTop >= 130;
-
-		const isSticky = () => {
-			setIsSticky(!isStickyValue);
+		const isSticky = (e: Event) => {
+			const scrollTop = window.scrollY;
+			const isStickyValue = scrollTop >= 130;
+			setIsSticky(isStickyValue);
 		};
 
 		window.addEventListener('scroll', isSticky);
 		return () => {
 			window.removeEventListener('scroll', isSticky);
 		};
-	});
+	}, [window.scrollY]);
 
 	const isTablet = windowWidth <= 796;
 	const navClassName = isTablet
@@ -69,7 +68,7 @@ export function Header({}: IHeader) {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 right-0 py-4 ${
+			className={`fixed top-0 left-0 right-0 py-4 z-50 ${
 				!isSticky ? 'text-white' : 'bg-white text-black'
 			}`}>
 			<div className='container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]'>
