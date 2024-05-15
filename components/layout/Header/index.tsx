@@ -36,7 +36,7 @@ export function Header({}: IHeader) {
 
 	const isTablet = windowWidth <= 796;
 	const navClassName = isTablet
-		? `absolute flex flex-col justify-center gap-12 items-center top-0 ${
+		? `transition-all duration-300 absolute flex flex-col justify-center gap-12 items-center top-0 ${
 				isCollapsed ? 'left-[200%]' : 'left-0'
 		  }  w-full h-dvh bg-[#02345a98]`
 		: '';
@@ -68,7 +68,7 @@ export function Header({}: IHeader) {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 right-0 py-4 z-50 ${
+			className={`transition-colors duration-300 fixed top-0 left-0 right-0 py-4 z-50 ${
 				!isSticky ? 'text-white' : 'bg-white text-black'
 			}`}>
 			<div className='container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]'>
