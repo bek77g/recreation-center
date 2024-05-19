@@ -4,7 +4,7 @@ import { Logo } from '@/components/ui';
 import { ROUTES } from '@/constants/links.constants';
 import { useWindowWidth } from '@/hooks';
 import { Menu, X } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -12,6 +12,7 @@ interface IHeader {}
 
 export function Header({}: IHeader) {
   const t = useTranslations();
+  const locale = useLocale();
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isTablet, setIsTablet] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -75,7 +76,7 @@ export function Header({}: IHeader) {
     >
       <div className="container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]">
         <div className="relative z-10">
-          <Link href={ROUTES.home}>
+          <Link href={`/${locale}${ROUTES.home}`}>
             <Logo />
           </Link>
         </div>
@@ -92,7 +93,7 @@ export function Header({}: IHeader) {
                   isTablet ? '[font-size:_clamp(18px,5vw,24px)]' : ''
                 }`}
               >
-                <Link href={item.href}>{t(`Navigation.${item.title}`)}</Link>
+                <Link href={`/${locale}${item.href}`}>{t(`Navigation.${item.title}`)}</Link>
               </li>
             ))}
           </ul>
