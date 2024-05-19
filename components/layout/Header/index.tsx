@@ -2,7 +2,7 @@
 import { LanguageSelector } from '@/components/shared';
 import { Logo } from '@/components/ui';
 import { ROUTES } from '@/constants/links.constants';
-import { useScrollDirection, useWindowWidth } from '@/hooks';
+import { useWindowWidth } from '@/hooks';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -16,7 +16,6 @@ export function Header({}: IHeader) {
   const [isTablet, setIsTablet] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const windowWidth = useWindowWidth();
-  const scrollDirection = useScrollDirection();
 
   useEffect(() => {
     setIsSticky(window.scrollY >= 130);
@@ -52,20 +51,20 @@ export function Header({}: IHeader) {
   const navigation: { title: string; href: string }[] = [
     {
       title: 'home',
-      href: ROUTES.home
+      href: ROUTES.home,
     },
     {
       title: 'healing',
-      href: ROUTES.healing
+      href: ROUTES.healing,
     },
     {
       title: 'about',
-      href: ROUTES.about
+      href: ROUTES.about,
     },
     {
       title: 'contacts',
-      href: ROUTES.contacts
-    }
+      href: ROUTES.contacts,
+    },
   ];
 
   return (
@@ -100,15 +99,9 @@ export function Header({}: IHeader) {
         {isTablet ? (
           <div onClick={handleCollapse} className="relative z-10 select-none">
             {isCollapsed ? (
-              <Menu
-                size={36}
-                color={isSticky && isCollapsed ? 'black' : 'white'}
-              />
+              <Menu size={36} color={isSticky && isCollapsed ? 'black' : 'white'} />
             ) : (
-              <X
-                size={36}
-                color={isSticky && isCollapsed ? 'black' : 'white'}
-              />
+              <X size={36} color={isSticky && isCollapsed ? 'black' : 'white'} />
             )}
           </div>
         ) : (
