@@ -75,7 +75,9 @@ export function Header({}: IHeader) {
     >
       <div className="container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]">
         <div className="relative z-10">
-          <Logo />
+          <Link href={ROUTES.home}>
+            <Logo />
+          </Link>
         </div>
         <nav className={navClassName}>
           <ul
