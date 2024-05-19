@@ -20,6 +20,14 @@ export default function Page() {
           {t('title')}
         </h2>
       </section>
+      <section>
+        <h2 className="section-title-large">
+          <span>Наши специалисты вдохнут в вас новые жизненные силы</span>
+        </h2>
+        <div className="grid grid-cols-3">
+          <div></div>
+        </div>
+      </section>
     </>
   );
 }
