@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'react-app', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -15,27 +15,10 @@ module.exports = {
     'react',
     'react-extra',
     'sort-exports',
-    'testing-library'
+    'testing-library',
+    '@typescript-eslint'
   ],
   ignorePatterns: ['**/node_modules', '**/public', '**/build'],
-  overrides: [
-    {
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-      extends: ['plugin:testing-library/react']
-    },
-    {
-      files: ['**/*.stories.*'],
-      rules: {
-        'import/no-anonymous-default-export': 'off'
-      }
-    },
-    {
-      files: ['**/styles.*', '**/styled.*'],
-      rules: {
-        'no-useless-computed-key': 0
-      }
-    }
-  ],
   rules: {
     'testing-library/await-async-query': 'error',
     'testing-library/no-await-sync-query': 'error',
