@@ -45,8 +45,6 @@ export function Header({}: IHeader) {
       }  w-full h-dvh bg-[#02345a98]`
     : '';
 
-  const isMoveUp = scrollDirection === 'up';
-
   const handleCollapse = () => {
     setIsCollapsed((prev) => !prev);
   };
