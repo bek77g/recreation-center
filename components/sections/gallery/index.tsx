@@ -20,7 +20,7 @@ const gallery: string[] = [
 
 export function GallerySection() {
   const t = useTranslations('Sections.Gallery');
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<any>(null);
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
