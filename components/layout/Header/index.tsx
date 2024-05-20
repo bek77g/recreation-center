@@ -6,6 +6,7 @@ import { useWindowWidth } from '@/hooks';
 import { Menu, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 interface IHeader {}
@@ -13,13 +14,25 @@ interface IHeader {}
 export function Header({}: IHeader) {
   const t = useTranslations();
   const locale = useLocale();
+  const pathname = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isTablet, setIsTablet] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const windowWidth = useWindowWidth();
 
+  const isStickyFunc = () => {
+    const stickyModeOnRoutes = [`/${locale}`, `/${locale}${ROUTES.attractions}`];
+    if (stickyModeOnRoutes.some((path) => path === pathname)) {
+      const scrollTop = window.scrollY;
+      const isStickyValue = scrollTop >= 130;
+      setIsSticky(isStickyValue);
+      return;
+    }
+    setIsSticky(true);
+  };
+
   useEffect(() => {
-    setIsSticky(window.scrollY >= 130);
+    isStickyFunc();
   }, []);
 
   useEffect(() => {
@@ -27,15 +40,9 @@ export function Header({}: IHeader) {
   }, [windowWidth]);
 
   useEffect(() => {
-    const isSticky = () => {
-      const scrollTop = window.scrollY;
-      const isStickyValue = scrollTop >= 130;
-      setIsSticky(isStickyValue);
-    };
-
-    window.addEventListener('scroll', isSticky);
+    window.addEventListener('scroll', isStickyFunc);
     return () => {
-      window.removeEventListener('scroll', isSticky);
+      window.removeEventListener('scroll', isStickyFunc);
     };
   });
 
