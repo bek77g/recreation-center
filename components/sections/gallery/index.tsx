@@ -58,8 +58,8 @@ export function GallerySection() {
             >
               {gallery.map((src) => (
                 // eslint-disable-next-line react/jsx-key
-                <SwiperSlide>
-                  <a key={src} href={src} data-fancybox="gallery" className="inline-block">
+                <SwiperSlide key={src}>
+                  <a href={src} data-fancybox="gallery" className="inline-block">
                     <Image
                       alt={src}
                       src={src}

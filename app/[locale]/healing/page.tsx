@@ -1,11 +1,5 @@
 import bgIntro from '@/assets/images/bg-healing.png';
-import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
-
-export const metadata: Metadata = {
-  title: '',
-  description: '',
-};
 
 export default function Page() {
   const t = useTranslations();

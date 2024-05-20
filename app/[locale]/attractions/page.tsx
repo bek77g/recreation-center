@@ -1,11 +1,5 @@
 import { IntroAttractionsSection } from '@/components/sections/intro-attractions';
-import type { Metadata } from 'next';
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: '',
-  description: '',
-};
 
 export default function Page() {
   return (

@@ -1,9 +1,13 @@
 import { Footer, Header } from '@/components/layout';
 import { WhatsAppFloating } from '@/components/shared/WhatsAppFloating';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-
-import type { Metadata } from 'next';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Recreation center',
@@ -22,12 +26,14 @@ export default async function BaseLayout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          <main>{children}</main>
-          <WhatsAppFloating text="Здравствуйте" phone="+996701151539" />
-          <Footer />
-        </NextIntlClientProvider>
+        <AntdRegistry>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Header />
+            <main>{children}</main>
+            <WhatsAppFloating text="Здравствуйте" phone="+996701151539" />
+            <Footer />
+          </NextIntlClientProvider>
+        </AntdRegistry>
       </body>
     </html>
   );
