@@ -6,7 +6,7 @@
     "home": "Home",
     "healing": "Healing",
     "about": "About",
-    "contacts": "Contact"
+    "attractions": "Attractions"
   },
   "Header": {
     "reserveButton": "Reserve a room"
@@ -17,10 +17,10 @@
   "Footer": {
     "address": {
       "title": "Address",
-      "text": "Turkestan region, city of Turkestan 157th quarter, building number 037"
+      "text": "Issyk-Kol region"
     },
-    "contacts": {
-      "title": "Contacts"
+    "attractions": {
+      "title": "Attractions"
     },
     "socials": {
       "title": "Social networks"
@@ -29,7 +29,7 @@
   },
   "Sections": {
     "intro": {
-      "title": "Welcome to the Issyk-Kol",
+      "title": "Welcome <br> to the <br> Issyk-Kol",
       "form": {
         "quests": "Guests",
         "phone": "Phone number",

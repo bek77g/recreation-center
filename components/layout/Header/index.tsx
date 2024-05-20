@@ -62,16 +62,16 @@ export function Header({}: IHeader) {
       href: ROUTES.home,
     },
     {
+      title: 'attractions',
+      href: ROUTES.attractions,
+    },
+    {
       title: 'healing',
       href: ROUTES.healing,
     },
     {
       title: 'about',
       href: ROUTES.about,
-    },
-    {
-      title: 'contacts',
-      href: ROUTES.contacts,
     },
   ];
 
