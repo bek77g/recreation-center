@@ -118,9 +118,9 @@ export function Header({}: IHeader) {
           <>
             <div className="flex gap-2 items-center">
               {!isTablet ? <LanguageSelector /> : null}
-              <button className="rounded-3xl py-[10px] px-[30px] font-medium bg-gradient-to-r hover:bg-gradient-to-l from-blue-900 to-blue-950 text-white">
+              {/* <button className="rounded-3xl py-[10px] w-[128px] text-center font-medium bg-gradient-to-r hover:bg-gradient-to-l from-blue-900 to-blue-950 text-white">
                 {t('Header.reserveButton')}
-              </button>
+              </button> */}
             </div>
           </>
         )}

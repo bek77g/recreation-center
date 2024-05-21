@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function Page() {
-  const t = useTranslations();
+  const t = useTranslations('Sections');
 
   return (
     <>
@@ -14,11 +14,11 @@ export default function Page() {
         style={{ backgroundImage: `url(${bgIntro.src})` }}
       >
         <h2 className="container text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)]">
-          {t('title')}
+          {t('intro-healing.title')}
         </h2>
       </section>
       <h2 className="section-title-large">
-        <span>Наши специалисты вдохнут в вас новые жизненные силы</span>
+        <span>{t('healing-section.title')}</span>
       </h2>
       <section className="container grid grid-cols-3 items-center !mb-10">
         <div className="col-span-1 px-[70px] md:px-[30px] py-[90px] md:py-[40px]">
@@ -98,6 +98,7 @@ export default function Page() {
           alt="healing-one"
         />
       </section>
+      {/* <Map /> */}
     </>
   );
 }

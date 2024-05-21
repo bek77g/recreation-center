@@ -9,7 +9,7 @@
     "attractions": "Туристик жерлер"
   },
   "Header": {
-    "reserveButton": "Бөлмө ээлөө"
+    "reserveButton": "Ээлөө"
   },
   "Floating": {
     "whatsapp": "Кат жазуу"
@@ -31,11 +31,13 @@
     "intro": {
       "title": "Ыссык-Көлгө <br> кош келиңиздер",
       "form": {
-        "quests": "коноктор",
-        "phone": "телефон номуру",
-        "notes": "эскертүүлөр",
-        "dateIn": "кирген күнү",
-        "dateOut": "чыгуу күнү",
+        "name": "Ат",
+        "quests": "Коноктор",
+        "phone": "Телефон номуру",
+        "notes": "Эскертүүлөр",
+        "dateIn": "Кирген күнү",
+        "dateOut": "Чыгуу күнү",
+        "reserveType": "Кабыл алуу түр",
         "reserve": "Кабыл алуу"
       }
     },
@@ -62,6 +64,12 @@
     },
     "intro-attractions": {
       "title": "Популярдуу туристтик жерлер"
+    },
+    "intro-healing": {
+      "title": "Дарылоо"
+    },
+    "healing-section": {
+      "title": "Биздин адистер сизге жаңы күч-кубат берет"
     }
   }
 }

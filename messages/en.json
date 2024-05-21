@@ -9,7 +9,7 @@
     "attractions": "Attractions"
   },
   "Header": {
-    "reserveButton": "Reserve a room"
+    "reserveButton": "Reserve"
   },
   "Floating": {
     "whatsapp": "Write the message"
@@ -31,11 +31,13 @@
     "intro": {
       "title": "Welcome <br> to the <br> Issyk-Kol",
       "form": {
+        "name": "Name",
         "quests": "Guests",
         "phone": "Phone number",
         "notes": "Notes",
         "dateIn": "Arrival date",
         "dateOut": "Departure date",
+        "reserveType": "Reservation type",
         "reserve": "Reserve"
       }
     },
@@ -62,6 +64,12 @@
     },
     "intro-attractions": {
       "title": "Popular attractions"
+    },
+    "intro-healing": {
+      "title": "Healing"
+    },
+    "healing-section": {
+      "title": "Our experts will breathe new vitality into you"
     }
   }
 }
