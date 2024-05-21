@@ -33,7 +33,7 @@ export function Header({}: IHeader) {
 
   useEffect(() => {
     isStickyFunc();
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     setIsTablet(windowWidth <= 796);

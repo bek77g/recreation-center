@@ -12,7 +12,7 @@ export function IntroAttractionsSection() {
     >
       <div className="relative z-20 container h-full flex flex-col justify-center items-center">
         <div className="flex flex-col items-center">
-          <h2 className="text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)]">
+          <h2 className="animate-fade-right animate-once animate-ease-in-out animate-normal text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)]">
             {t('title')}
           </h2>
         </div>

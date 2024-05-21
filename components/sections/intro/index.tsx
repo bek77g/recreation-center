@@ -19,12 +19,12 @@ export function IntroSection() {
       <div className="relative z-20 container h-full flex flex-col justify-center items-center">
         <div className="flex flex-col items-center gap-6">
           <h2
-            className="text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)] from:translate-y-5 to:translate-y-0"
+            className="animate-ease-in-out animate-fade-up animate-once text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)] from:translate-y-5 to:translate-y-0"
             dangerouslySetInnerHTML={{ __html: t.raw('title') }}
           />
           <div className="relative">
             <Form
-              className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? 'h-[40px]' : ''}`}
+              className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
             >
               <Input
                 name="name"

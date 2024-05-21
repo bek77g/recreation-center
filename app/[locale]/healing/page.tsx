@@ -13,7 +13,7 @@ export default function Page() {
         className="my-24 relative py-40 w-full"
         style={{ backgroundImage: `url(${bgIntro.src})` }}
       >
-        <h2 className="container text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)]">
+        <h2 className="animate-fade-down animate-once animate-ease-in-out container text-white font-black uppercase text-center [font-family:_var(--font3)] [font-size:_clamp(30px,5vw,85px)]">
           {t('intro-healing.title')}
         </h2>
       </section>

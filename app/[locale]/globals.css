@@ -43,15 +43,15 @@ a {
 
 @layer base {
   .section-title {
-    @apply [font-family:_var(--second-family)] [font-size:_clamp(32px,5vw,64px)] font-bold text-[#010101] leading-none mt-2 mb-8;
+    @apply animate-fade-down animate-once [font-family:_var(--second-family)] [font-size:_clamp(32px,5vw,64px)] font-bold text-[#010101] leading-none mt-2 mb-8;
   }
   .section-title-large {
-    @apply relative [font-family:_var(--second-family)] [font-size:_clamp(26px,5vw,56px)] font-bold text-[#010101] leading-none mt-2 mb-8 text-center before:absolute before:-left-[82%] before:h-[3px] before:bg-[#E1963C] after:absolute before:w-full after:w-full after:h-[3px] after:bg-[#E1963C] after:-right-[82%] before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2;
+    @apply animate-fade-down animate-once relative [font-family:_var(--second-family)] [font-size:_clamp(26px,5vw,56px)] font-bold text-[#010101] leading-none mt-2 mb-8 text-center before:absolute before:-left-[82%] before:h-[3px] before:bg-[#E1963C] after:absolute before:w-full after:w-full after:h-[3px] after:bg-[#E1963C] after:-right-[82%] before:top-1/2 after:top-1/2 before:-translate-y-1/2 after:-translate-y-1/2;
   }
   .section-title-large > span {
-    @apply inline-block w-[65%];
+    @apply animate-fade-down animate-once inline-block w-[65%];
   }
   .section-suptitle {
-    @apply [font-family:_var(--font-family)] [font-size:_clamp(18px,5vw,20px)] text-[#707070];
+    @apply animate-fade-down animate-once [font-family:_var(--font-family)] [font-size:_clamp(18px,5vw,20px)] text-[#707070];
   }
 }
