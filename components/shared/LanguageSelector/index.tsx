@@ -21,7 +21,7 @@ export const LanguageSelector = () => {
     setLanguages(languages);
   }, []);
 
-  const handleLanguageChange = async (language) => {
+  const handleLanguageChange = async (language: string) => {
     const splitPathName = pathname.split('/');
     splitPathName.shift();
     splitPathName.shift();
