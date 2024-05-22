@@ -6,7 +6,7 @@ type IAnchorLinkProps = {
 } & LinkProps &
   HTMLProps<HTMLAnchorElement>;
 
-export function AnchorLink({ children, ...props }: LinkProps & HTMLProps<HTMLAnchorElement>) {
+export function AnchorLink({ children, ...props }: IAnchorLinkProps) {
   return (
     <Link
       {...props}
