@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-import { AOSInit } from '@/utils';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -27,7 +26,6 @@ export default async function BaseLayout({
 
   return (
     <html lang={locale}>
-      <AOSInit />
       <body>
         <AntdRegistry>
           <NextIntlClientProvider locale={locale} messages={messages}>
