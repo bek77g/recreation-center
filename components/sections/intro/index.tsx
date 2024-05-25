@@ -24,7 +24,7 @@ export function IntroSection() {
           />
           <div className="relative">
             <Form
-              className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
+              className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
             >
               <Input
                 name="name"
@@ -46,30 +46,25 @@ export function IntroSection() {
                 prefix={<ListIcon size={22} strokeWidth={1} />}
                 placeholder={t('form.notes')}
                 size="large"
-                className="col-span-1"
-              />
-              <Button
-                type="primary"
-                className="h-full col-span-1 sm:col-span-2 md:col-span-1"
-                size="large"
-                htmlType="button"
-                onClick={() => setIsShow(!isShow)}
-              >
-                {t('form.reserve')}
-              </Button>
-              <DatePicker.RangePicker
-                placeholder={[t('form.dateIn'), t('form.dateOut')]}
-                className="col-span-1 sm:col-span-2"
-                size="large"
+                className="col-span-1 sm:col-span-2 md:col-span-1"
               />
               <Input
                 name="quests"
                 prefix={<UsersRound size={22} strokeWidth={1} />}
                 placeholder={t('form.quests')}
                 size="large"
-                className="col-span-1"
+                className={`col-span-1 ${!isShow ? 'order-1' : ''}`}
                 type="number"
               />
+              <Button
+                type="primary"
+                className={`h-full col-span-1 sm:col-span-2 md:col-span-1 ${isShow ? 'order-1' : ''}`}
+                size="large"
+                htmlType="button"
+                onClick={() => setIsShow(!isShow)}
+              >
+                {t('form.reserve')}
+              </Button>
               <Select
                 placeholder={t('form.reserveType')}
                 className={`col-span-1`}
@@ -78,6 +73,11 @@ export function IntroSection() {
                   { value: 'event', label: 'Мероприятие' },
                   { value: 'place', label: 'Место' },
                 ]}
+                size="large"
+              />
+              <DatePicker.RangePicker
+                placeholder={[t('form.dateIn'), t('form.dateOut')]}
+                className="col-span-1 sm:col-span-2"
                 size="large"
               />
             </Form>

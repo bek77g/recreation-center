@@ -1,8 +1,10 @@
 import { MoveRight } from 'lucide-react';
-import Link from 'next/link';
-import { ReactEventHandler } from 'react';
+import Link, { LinkProps } from 'next/link';
+import { AnchorHTMLAttributes } from 'react';
 
-export function AnchorLink({ children, ...props }: ReactEventHandler<HTMLAnchorElement>) {
+type IAnchorLinkProps = LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export function AnchorLink({ children, ...props }: IAnchorLinkProps) {
   return (
     <Link
       {...props}
