@@ -58,7 +58,16 @@ import Image from 'next/image';
 //   },
 // ];
 
-export function ProvideSection() {
+interface IProvideSectionProps {
+  data: {
+    title: string;
+    description: string;
+    coverSrc: string;
+    type: 'provide' | 'culture';
+  }[];
+}
+
+export function ProvideSection({ data = [] }: IProvideSectionProps) {
   const t = useTranslations('Sections.provide');
 
   return (
@@ -66,43 +75,47 @@ export function ProvideSection() {
       <h2 className="section-title text-center">{t('title')}</h2>
       <h3 className="section-suptitle mt-2">{t('rest.title')}:</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {uniqueRest.map((item) => (
-          <div className="flex flex-col gap-4 my-4 drop-shadow-lg" key={item.title}>
-            <Image
-              src={item.coverSrc}
-              alt={item.title}
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-full h-[280px] object-cover"
-            />
-            <div className="w-full px-4">
-              <h4 className="font-bold [font-family:_var(--second-family)] [font-size:_clamp(18px,5vw,30px)]">
-                {item.title}
-              </h4>
-              <p>{item.description}</p>
+        {data
+          .filter((item) => item.type === 'provide')
+          .map((item) => (
+            <div className="flex flex-col gap-4 my-4 drop-shadow-lg" key={item.title}>
+              <Image
+                src={item.coverSrc}
+                alt={item.title}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-[280px] object-cover"
+              />
+              <div className="w-full px-4">
+                <h4 className="font-bold [font-family:_var(--second-family)] [font-size:_clamp(18px,5vw,30px)]">
+                  {item.title}
+                </h4>
+                <p>{item.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
       <h3 className="section-suptitle mt-2">{t('culture.title')}:</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {immersionInCulture.map((item) => (
-          <div className="flex gap-4 my-4 drop-shadow-lg" key={item.title}>
-            <Image
-              src={item.coverSrc}
-              alt={item.title}
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-1/3 h-auto"
-            />
-            <div className="w-2/3">
-              <h4 className="font-bold">{item.title}</h4>
-              <p>{item.description}</p>
+        {data
+          .filter((item) => item.type === 'culture')
+          .map((item) => (
+            <div className="flex gap-4 my-4 drop-shadow-lg" key={item.title}>
+              <Image
+                src={item.coverSrc}
+                alt={item.title}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-1/3 h-auto"
+              />
+              <div className="w-2/3">
+                <h4 className="font-bold">{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </section>
   );

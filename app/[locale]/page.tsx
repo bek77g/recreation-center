@@ -3,13 +3,21 @@ import { AttractionsSection } from '@/components/sections/attractions';
 import { GallerySection } from '@/components/sections/gallery';
 import { IntroSection } from '@/components/sections/intro';
 import { ProvideSection } from '@/components/sections/provide';
+import { api } from '@/lib/api';
 
-export default function Home() {
+const getProvidesData = async () => {
+  const res = await api.get('/provides');
+  return res;
+};
+
+export default async function Home() {
+  const provideData = await getProvidesData();
+
   return (
     <>
       <IntroSection />
       <AboutSection />
-      <ProvideSection />
+      <ProvideSection data={provideData} />
       <AttractionsSection />
       <GallerySection />
     </>
