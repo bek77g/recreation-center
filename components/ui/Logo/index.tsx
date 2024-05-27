@@ -1,4 +1,8 @@
+import { useTranslations } from 'next-intl';
+
 export function Logo() {
+  const t = useTranslations('Logo');
+
   return (
     <div className="flex items-center font-bold gap-2 w-fit">
       <svg
@@ -187,8 +191,8 @@ export function Logo() {
         </defs>
       </svg>
       <h2 className="flex flex-col gap-0">
-        <span className="text-sm">Жемчужина</span>
-        <span className="text-md">Ыссык-Көл</span>
+        <span className="text-sm">{t('sup')}</span>
+        <span className="text-md">{t('title')}</span>
       </h2>
     </div>
   );
