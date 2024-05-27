@@ -16,7 +16,7 @@ export function AboutSection() {
         <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <p data-aos="fade-up" dangerouslySetInnerHTML={{ __html: t.raw('description') }} />
           <div className="relative">
-            <a href="https://www.youtube.com/watch?v=JUWgIhYYcWk" data-fancybox="gallery">
+            <a href="https://www.youtube.com/watch?v=JUWgIhYYcWk" data-fancybox="video">
               <Image
                 src={videoPreview.src}
                 alt="video preview"
