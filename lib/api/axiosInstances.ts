@@ -3,7 +3,7 @@ import axios from 'axios';
 import { errorHandler, requestHandler, responseHandler } from './interceptors';
 
 export const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API,
+  baseURL: process.env.NEXT_INTERNAL_API_URL,
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
