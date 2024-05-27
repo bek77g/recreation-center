@@ -3,17 +3,7 @@ import { AttractionsSection } from '@/components/sections/attractions';
 import { GallerySection } from '@/components/sections/gallery';
 import { IntroSection } from '@/components/sections/intro';
 import { ProvideSection } from '@/components/sections/provide';
-import { api } from '@/lib/api';
-
-const getProvidesData = async () => {
-  const res = await api.get('/provides');
-  return res;
-};
-
-const getGalleryData = async () => {
-  const res = await api.get('/gallery');
-  return res;
-};
+import { getGalleryData, getProvidesData } from '@/utils/fetch';
 
 export default async function Home() {
   const provideData = await getProvidesData();
