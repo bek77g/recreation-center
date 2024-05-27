@@ -1,6 +1,8 @@
 import { IntroAttractionsSection } from '@/components/sections/intro-attractions';
 import Image from 'next/image';
 
+export const dynamic = 'force-static';
+
 export default function Page() {
   return (
     <>
