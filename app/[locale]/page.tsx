@@ -10,8 +10,14 @@ const getProvidesData = async () => {
   return res;
 };
 
+const getGalleryData = async () => {
+  const res = await api.get('/gallery');
+  return res;
+};
+
 export default async function Home() {
   const provideData = await getProvidesData();
+  const galleryData = await getGalleryData();
 
   return (
     <>
@@ -19,7 +25,7 @@ export default async function Home() {
       <AboutSection />
       <ProvideSection data={provideData} />
       <AttractionsSection />
-      <GallerySection />
+      <GallerySection data={galleryData} />
     </>
   );
 }

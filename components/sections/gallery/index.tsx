@@ -7,18 +7,24 @@ import Image from 'next/image';
 import { useCallback, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const gallery: string[] = [
-  '/gallery/gallery-one.jpeg',
-  '/gallery/gallery-second.jpeg',
-  '/gallery/gallery-third.jpeg',
-  '/gallery/gallery-fourth.jpeg',
-  '/gallery/gallery-fifth.jpeg',
-  '/gallery/gallery-sixth.jpeg',
-  '/gallery/gallery-seventh.jpeg',
-  '/gallery/gallery-eight.jpeg',
-];
+// const gallery: string[] = [
+//   '/gallery/gallery-one.jpeg',
+//   '/gallery/gallery-second.jpeg',
+//   '/gallery/gallery-third.jpeg',
+//   '/gallery/gallery-fourth.jpeg',
+//   '/gallery/gallery-fifth.jpeg',
+//   '/gallery/gallery-sixth.jpeg',
+//   '/gallery/gallery-seventh.jpeg',
+//   '/gallery/gallery-eight.jpeg',
+// ];
 
-export function GallerySection() {
+interface IGallerySectionProps {
+  data: {
+    coverSrc: string;
+  }[];
+}
+
+export function GallerySection({ data }: IGallerySectionProps) {
   const t = useTranslations('Sections.gallery');
   const sliderRef = useRef<any>(null);
 
@@ -56,13 +62,13 @@ export function GallerySection() {
                 },
               }}
             >
-              {gallery.map((src) => (
+              {data.map((src) => (
                 // eslint-disable-next-line react/jsx-key
-                <SwiperSlide key={src}>
-                  <a href={src} data-fancybox="gallery" className="inline-block">
+                <SwiperSlide key={src.coverSrc}>
+                  <a href={src.coverSrc} data-fancybox="gallery" className="inline-block">
                     <Image
-                      alt={src}
-                      src={src}
+                      alt={src.coverSrc}
+                      src={src.coverSrc}
                       width="0"
                       height="0"
                       sizes="100vw"
