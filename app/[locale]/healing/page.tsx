@@ -4,8 +4,6 @@ import healingSecond from '@/assets/images/healing-second.png';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export const dynamic = 'force-static';
-
 export default function Page() {
   const t = useTranslations('Sections');
 
