@@ -10,6 +10,8 @@ const nextConfig = {
     NEXT_INTERNAL_API_URL: process.env.NEXT_INTERNAL_API_URL,
     NEXT_CONTENTFUL_SPACE_ID: process.env.NEXT_CONTENTFUL_SPACE_ID,
     NEXT_CONTENTFUL_ACCESS_TOKEN: process.env.NEXT_CONTENTFUL_ACCESS_TOKEN,
+    NEXT_CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN:
+      process.env.NEXT_CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN,
   },
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
