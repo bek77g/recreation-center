@@ -1,6 +1,5 @@
 'use client';
 
-import { Fancybox } from '@/components/ui';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -43,7 +42,7 @@ export function GallerySection({ data }: IGallerySectionProps) {
       <div className="container">
         <h2 className="section-title text-end">{t('title')}</h2>
         <div className="relative">
-          <Fancybox className="px-[60px]">
+          <div className="px-[60px]">
             <Swiper
               loop
               ref={sliderRef}
@@ -78,7 +77,7 @@ export function GallerySection({ data }: IGallerySectionProps) {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </Fancybox>
+          </div>
           <div
             className="select-none cursor-pointer grid place-items-center absolute z-10 top-1/2 -translate-x-[13px] -translate-y-1/2 left-0 w-[60px] h-[60px] rounded-full bg-[#e1963c]"
             onClick={handlePrev}
