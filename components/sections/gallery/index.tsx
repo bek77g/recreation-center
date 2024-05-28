@@ -1,5 +1,6 @@
 'use client';
 
+import { TypeGalleryFields } from '@/types/contentful';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -18,9 +19,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // ];
 
 interface IGallerySectionProps {
-  data: {
-    coverSrc: string;
-  }[];
+  data: TypeGalleryFields[];
 }
 
 export function GallerySection({ data }: IGallerySectionProps) {
@@ -63,11 +62,15 @@ export function GallerySection({ data }: IGallerySectionProps) {
             >
               {data.map((src) => (
                 // eslint-disable-next-line react/jsx-key
-                <SwiperSlide key={src.coverSrc}>
-                  <a href={src.coverSrc} data-fancybox="gallery" className="inline-block">
+                <SwiperSlide key={`https:${src.cover?.fields.file?.url}`}>
+                  <a
+                    href={`https:${src.cover?.fields.file?.url}`}
+                    data-fancybox="gallery"
+                    className="inline-block"
+                  >
                     <Image
-                      alt={src.coverSrc}
-                      src={src.coverSrc}
+                      alt={src.cover?.fields.file?.fileName}
+                      src={`https:${src.cover?.fields.file?.url}`}
                       width="0"
                       height="0"
                       sizes="100vw"

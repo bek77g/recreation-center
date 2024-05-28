@@ -1,11 +1,17 @@
-import { api } from '@/lib/api';
+import client from '@/contentful';
 
 export const getProvidesData = async () => {
-  const res = await api.get('/provides');
-  return res;
+  const res = await client.getEntries({
+    content_type: 'provides',
+  });
+
+  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
 };
 
 export const getGalleryData = async () => {
-  const res = await api.get('/gallery');
-  return res;
+  const res = await client.getEntries({
+    content_type: 'gallery',
+  });
+
+  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
 };
