@@ -15,3 +15,11 @@ export const getGalleryData = async () => {
 
   return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
 };
+
+// export const postApplicationForm = async () => {
+//   const res = await client.createEntry({
+//     content_type: 'applicationForm',
+//     fields: {},
+//   });
+//   return res;
+// };
