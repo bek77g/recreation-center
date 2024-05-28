@@ -5,11 +5,11 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
+import '@/app/globals.css';
 import { Fancybox } from '@/components/ui';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Recreation center',
