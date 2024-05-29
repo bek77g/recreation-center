@@ -19,7 +19,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // ];
 
 interface IGallerySectionProps {
-  data: TypeGalleryFields[];
+  data: TypeGalleryFields;
 }
 
 export function GallerySection({ data }: IGallerySectionProps) {
@@ -35,6 +35,8 @@ export function GallerySection({ data }: IGallerySectionProps) {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+
+  const covers = data.covers.map((cover) => cover.fields);
 
   return (
     <section className="py-10">
@@ -60,17 +62,17 @@ export function GallerySection({ data }: IGallerySectionProps) {
                 },
               }}
             >
-              {data.map((src) => (
+              {covers.map((src) => (
                 // eslint-disable-next-line react/jsx-key
-                <SwiperSlide key={`https:${src.cover?.fields.file?.url}`}>
+                <SwiperSlide key={`https:${src.file?.title}`}>
                   <a
-                    href={`https:${src.cover?.fields.file?.url}`}
+                    href={`https:${src.file?.url}`}
                     data-fancybox="gallery"
                     className="inline-block"
                   >
                     <Image
-                      alt={src.cover?.fields.file?.fileName}
-                      src={`https:${src.cover?.fields.file?.url}`}
+                      alt={src.file?.fileName}
+                      src={`https:${src.file?.url}`}
                       width="0"
                       height="0"
                       sizes="100vw"

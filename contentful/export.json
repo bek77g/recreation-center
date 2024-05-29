@@ -406,6 +406,91 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "gallery",
+        "type": "ContentType",
+        "createdAt": "2024-05-29T05:51:03.033Z",
+        "updatedAt": "2024-05-29T05:52:02.641Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-05-29T05:52:02.641Z",
+        "firstPublishedAt": "2024-05-29T05:51:03.378Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/content_types/gallery"
+      },
+      "displayField": "name",
+      "name": "Gallery",
+      "description": "",
+      "fields": [
+        {
+          "id": "covers",
+          "name": "Covers",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -654,6 +739,62 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "0wvqwyal57dn",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-05-29T05:51:03.495Z",
+        "createdBy": {
+          "sys": {
+            "id": "5WPx3kxv4W60pNfeYCAXkM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-05-29T05:52:03.425Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5WPx3kxv4W60pNfeYCAXkM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "gallery",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "covers",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -779,7 +920,7 @@
         "id": "4sdmEgqqKBlfTQ4syCDzWI",
         "type": "Entry",
         "createdAt": "2024-05-29T05:33:33.393Z",
-        "updatedAt": "2024-05-29T05:34:04.547Z",
+        "updatedAt": "2024-05-29T05:47:54.017Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -787,8 +928,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2024-05-29T05:34:04.547Z",
+        "publishedVersion": 6,
+        "publishedAt": "2024-05-29T05:47:54.017Z",
         "firstPublishedAt": "2024-05-29T05:34:04.547Z",
         "createdBy": {
           "sys": {
@@ -804,8 +945,8 @@
             "id": "5WPx3kxv4W60pNfeYCAXkM"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 7,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -831,13 +972,16 @@
       },
       "fields": {
         "label_ru": {
-          "en": "Номера"
+          "en": "Номер"
         },
         "label_ky": {
           "en": "Бөлмө"
         },
         "label_en": {
-          "en": "Rooms"
+          "en": "Room"
+        },
+        "slug": {
+          "en": "room"
         }
       }
     },
@@ -859,7 +1003,7 @@
         "id": "5rop3jdxP9H6WfPz7xLvcw",
         "type": "Entry",
         "createdAt": "2024-05-29T05:34:18.121Z",
-        "updatedAt": "2024-05-29T05:34:53.294Z",
+        "updatedAt": "2024-05-29T05:47:39.444Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -867,8 +1011,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2024-05-29T05:34:53.294Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-05-29T05:47:39.444Z",
         "firstPublishedAt": "2024-05-29T05:34:53.294Z",
         "createdBy": {
           "sys": {
@@ -884,8 +1028,8 @@
             "id": "5WPx3kxv4W60pNfeYCAXkM"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -917,7 +1061,10 @@
           "en": "Мероприятие"
         },
         "label_en": {
-          "en": "Events"
+          "en": "Event"
+        },
+        "slug": {
+          "en": "event"
         }
       }
     },
@@ -939,7 +1086,90 @@
         "id": "2Zc6RZelUveFhsTgtHieTn",
         "type": "Entry",
         "createdAt": "2024-05-29T05:35:22.876Z",
-        "updatedAt": "2024-05-29T05:35:40.259Z",
+        "updatedAt": "2024-05-29T05:47:21.069Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-05-29T05:47:21.069Z",
+        "firstPublishedAt": "2024-05-29T05:35:40.259Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "reserveType"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/2Zc6RZelUveFhsTgtHieTn"
+      },
+      "fields": {
+        "label_ru": {
+          "en": "Место"
+        },
+        "label_ky": {
+          "en": "Жайгашкан жер"
+        },
+        "label_en": {
+          "en": "Place"
+        },
+        "slug": {
+          "en": "place"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "69Eg1Z8Xw42rZ3MekMVSFf",
+        "type": "Entry",
+        "createdAt": "2024-05-29T05:52:09.730Z",
+        "updatedAt": "2024-05-29T05:52:48.829Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -948,8 +1178,8 @@
           }
         },
         "publishedVersion": 3,
-        "publishedAt": "2024-05-29T05:35:40.259Z",
-        "firstPublishedAt": "2024-05-29T05:35:40.259Z",
+        "publishedAt": "2024-05-29T05:52:48.829Z",
+        "firstPublishedAt": "2024-05-29T05:52:48.829Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -984,20 +1214,74 @@
           "sys": {
             "type": "Link",
             "linkType": "ContentType",
-            "id": "reserveType"
+            "id": "gallery"
           }
         },
-        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/2Zc6RZelUveFhsTgtHieTn"
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/69Eg1Z8Xw42rZ3MekMVSFf"
       },
       "fields": {
-        "label_ru": {
-          "en": "Место"
+        "covers": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6fxySohrCEa7YHoo1wkAu"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2R4Jwc9HHEmSHOHM5k4xhf"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6AiSMK1wT3aHPg0WODtRNg"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7Kt4fO5N9jXwfAbOgSVSHw"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4i4JvSk41EwFRkUO4iWueI"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "49LPA2iCv00u7uOeCj2KEa"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4KB8iIsYof79FZK0xoQpN7"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6d2769JNwiWSdJzrxm948f"
+              }
+            }
+          ]
         },
-        "label_ky": {
-          "en": "Жайгашкан жер"
-        },
-        "label_en": {
-          "en": "Place"
+        "name": {
+          "en": "Home page"
         }
       }
     }

@@ -16,12 +16,12 @@ export const getProvidesData = async () => {
   return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
 };
 
-export const getGalleryData = async () => {
+export const getGalleryData = async (name: string = '') => {
   const res = await client.getEntries({
     content_type: 'gallery',
   });
 
-  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
+  return res.items.reduce((acc, rec) => [...acc, rec.fields], []).find((el) => el.name === name);
 };
 
 // export const postApplicationForm = async () => {
