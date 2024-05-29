@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import bgIntro from '@/assets/images/bg-intro.jpg';
 import { TypeReserveTypeFields } from '@/types/contentful';
-import { List, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
+import { ArrowDownToLine, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
 import { useState } from 'react';
 
 interface IIntroSectionProps {
@@ -19,7 +19,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
 
   return (
     <section
-      className="relative h-screen w-full before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[#02345a52] before:z-10"
+      className="relative h-screen w-full before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[#02345a52] before:z-10 min-h-[490px]"
       style={{ backgroundImage: `url(${bgIntro.src})` }}
     >
       <div className="relative z-20 container h-full flex flex-col justify-center items-center">
@@ -90,7 +90,11 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
               className="absolute -translate-x-1/2 left-1/2 top-full translate-y-4 cursor-pointer bg-blue-600 p-1 rounded"
               onClick={() => setIsShow(!isShow)}
             >
-              <List color="#fff" />
+              <ArrowDownToLine
+                strokeWidth={1}
+                color="#fff"
+                className={`transition ${isShow ? 'rotate-180' : ''}`}
+              />
             </div>
           </div>
         </div>
