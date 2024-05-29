@@ -75,7 +75,7 @@ export function ProvideSection({ data = [] }: IProvideSectionProps) {
         {data
           .filter((item) => item.type === 'provide')
           .map((item) => (
-            <div className="flex flex-col gap-4 my-4 drop-shadow-lg" key={item.slug}>
+            <div className="flex flex-col gap-4 my-4 drop-shadow-lg" key={item.cover?.sys.id}>
               <Image
                 src={`https:${item.cover?.fields.file?.url}`}
                 alt={item.cover?.fields.title}
@@ -98,7 +98,7 @@ export function ProvideSection({ data = [] }: IProvideSectionProps) {
         {data
           .filter((item) => item.type === 'culture')
           .map((item) => (
-            <div className="flex gap-4 my-4 drop-shadow-lg" key={item.slug}>
+            <div className="flex gap-4 my-4 drop-shadow-lg" key={item.cover?.sys.id}>
               <Image
                 src={`https:${item.cover?.fields.file?.url}`}
                 alt={item.cover?.fields.title}

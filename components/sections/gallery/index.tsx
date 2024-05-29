@@ -64,7 +64,7 @@ export function GallerySection({ data }: IGallerySectionProps) {
             >
               {covers.map((src) => (
                 // eslint-disable-next-line react/jsx-key
-                <SwiperSlide key={`https:${src.file?.title}`}>
+                <SwiperSlide key={src.file?.fileName}>
                   <a
                     href={`https:${src.file?.url}`}
                     data-fancybox="gallery"
