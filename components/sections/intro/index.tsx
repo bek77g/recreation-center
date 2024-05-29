@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import bgIntro from '@/assets/images/bg-intro.jpg';
 import { TypeReserveTypeFields } from '@/types/contentful';
+import { postApplicationForm } from '@/utils/fetch';
 import { ArrowDownToLine, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
 import { useState } from 'react';
 
@@ -21,7 +22,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
   const [isShow, setIsShow] = useState(false);
   const [form] = Form.useForm();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
     const requiredFields = ['name', 'phone'];
     if (requiredFields.some((field) => !data[field])) {
       api.error({
@@ -35,6 +36,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
       return;
     }
 
+    const res = await postApplicationForm();
     console.log(data);
   };
 
