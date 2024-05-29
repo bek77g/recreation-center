@@ -35,9 +35,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
       return;
     }
 
-    console.log(form.getFieldsValue());
     console.log(data);
-    console.log('form submitted');
   };
 
   return (
