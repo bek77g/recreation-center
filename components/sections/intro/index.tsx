@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import bgIntro from '@/assets/images/bg-intro.jpg';
 import { TypeReserveTypeFields } from '@/types/contentful';
+import { useForm } from 'antd/es/form/Form';
 import { ArrowDownToLine, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
 import { useState } from 'react';
 
@@ -16,10 +17,15 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
   const locale = useLocale();
   const [isShow, setIsShow] = useState(false);
   const t = useTranslations('Sections.intro');
+  const [form] = useForm();
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
 
   return (
     <section
-      className="relative h-screen w-full before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[#02345a52] before:z-10 min-h-[490px]"
+      className="relative h-screen w-full before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[#02345a52] before:z-10 min-h-[510px]"
       style={{ backgroundImage: `url(${bgIntro.src})` }}
     >
       <div className="relative z-20 container h-full flex flex-col justify-center items-center">
@@ -30,6 +36,8 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
           />
           <div className="relative">
             <Form
+              form={form}
+              onSubmit={onSubmit}
               className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
             >
               <Input
@@ -66,8 +74,6 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
                 type="primary"
                 className={`h-full col-span-1 sm:col-span-2 md:col-span-1 ${isShow ? 'order-1' : ''}`}
                 size="large"
-                htmlType="button"
-                onClick={() => setIsShow(!isShow)}
               >
                 {t('form.reserve')}
               </Button>
