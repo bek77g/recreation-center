@@ -1,4 +1,4 @@
-import client from '@/contentful';
+import { client } from '@/contentful';
 
 export const getReserveTypes = async () => {
   const res = await client.getEntries({
