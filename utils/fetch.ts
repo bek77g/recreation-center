@@ -24,10 +24,25 @@ export const getGalleryData = async (name: string = '') => {
   return res.items.reduce((acc, rec) => [...acc, rec.fields], []).find((el) => el.name === name);
 };
 
-// export const postApplicationForm = async () => {
-//   const res = await client.createEntry({
-//     content_type: 'applicationForm',
-//     fields: {},
-//   });
-//   return res;
-// };
+export const postApplicationForm = () => {
+  client
+    .getSpace(process.env.NEXT_CONTENTFUL_SPACE_ID)
+    .then((space) => space.getEnvironment('application'))
+    .then((environment) =>
+      environment.createContentType({
+        fields: [
+          {
+            name: 'QWW',
+            phone: 0,
+            note: '',
+            quests: 0,
+            dateIn: 0,
+            dateOut: 0,
+            reserveType: 0,
+          },
+        ],
+      })
+    )
+    .then((contentType) => console.log(contentType))
+    .catch(console.error);
+};
