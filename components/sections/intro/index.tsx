@@ -1,13 +1,19 @@
 'use client';
 
 import { Button, DatePicker, Form, Input, Select } from 'antd';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import bgIntro from '@/assets/images/bg-intro.jpg';
+import { TypeReserveTypeFields } from '@/types/contentful';
 import { List, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
 import { useState } from 'react';
 
-export function IntroSection() {
+interface IIntroSectionProps {
+  reserveTypes: TypeReserveTypeFields[];
+}
+
+export function IntroSection({ reserveTypes }: IIntroSectionProps) {
+  const locale = useLocale();
   const [isShow, setIsShow] = useState(false);
   const t = useTranslations('Sections.intro');
 
@@ -68,11 +74,10 @@ export function IntroSection() {
               <Select
                 placeholder={t('form.reserveType')}
                 className={`col-span-1`}
-                options={[
-                  { value: 'room', label: 'Номера' },
-                  { value: 'event', label: 'Мероприятие' },
-                  { value: 'place', label: 'Место' },
-                ]}
+                options={reserveTypes.map((reserveType) => ({
+                  value: reserveType.slug,
+                  label: reserveType[`label_${locale}`],
+                }))}
                 size="large"
               />
               <DatePicker.RangePicker

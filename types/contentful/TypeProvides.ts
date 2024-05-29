@@ -8,7 +8,7 @@ export interface TypeProvidesFields {
     description_ky?: EntryFields.Text;
     description_en?: EntryFields.Text;
     cover?: Asset;
-    type?: EntryFields.Symbol;
+    type?: "culture" | "provide";
     slug?: EntryFields.Symbol;
 }
 

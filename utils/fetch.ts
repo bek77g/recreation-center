@@ -1,5 +1,13 @@
 import client from '@/contentful';
 
+export const getReserveTypes = async () => {
+  const res = await client.getEntries({
+    content_type: 'reserveType',
+  });
+
+  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
+};
+
 export const getProvidesData = async () => {
   const res = await client.getEntries({
     content_type: 'provides',
