@@ -20,6 +20,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
 
   const onSubmit = (data: any) => {
     console.log(form.getFieldsValue());
+    console.log(data);
     console.log('form submitted');
   };
 
@@ -40,14 +41,14 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
               onFinish={onSubmit}
               className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
             >
-              <Form.Item className="!mb-0 col-span-1" name="name">
+              <Form.Item className="!mb-0 col-span-1" name="name" rules={[{ required: true }]}>
                 <Input
                   prefix={<User2 size={22} strokeWidth={1} />}
                   placeholder={t('form.name')}
                   size="large"
                 />
               </Form.Item>
-              <Form.Item className="!mb-0 col-span-1" name="phone">
+              <Form.Item className="!mb-0 col-span-1" name="phone" rules={[{ required: true }]}>
                 <Input
                   prefix={<Phone size={22} strokeWidth={1} />}
                   placeholder={t('form.phone')}
@@ -55,7 +56,11 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
                   type="tel"
                 />
               </Form.Item>
-              <Form.Item className="!mb-0 col-span-1 sm:col-span-2 md:col-span-1" name="notes">
+              <Form.Item
+                className="!mb-0 col-span-1 sm:col-span-2 md:col-span-1"
+                name="notes"
+                rules={[{ required: true }]}
+              >
                 <Input
                   prefix={<ListIcon size={22} strokeWidth={1} />}
                   placeholder={t('form.notes')}
