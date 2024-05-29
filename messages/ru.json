@@ -32,7 +32,7 @@
     "socials": {
       "title": "Социальные сети"
     },
-    "copyright": "© 2022 recreation-center. Все права защищены."
+    "copyright": "© {year} {copyright}. Все права защищены."
   },
   "Sections": {
     "intro": {

@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import bgIntro from '@/assets/images/bg-intro.jpg';
 import { TypeReserveTypeFields } from '@/types/contentful';
-import { useForm } from 'antd/es/form/Form';
 import { ArrowDownToLine, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
 import { useState } from 'react';
 
@@ -17,10 +16,11 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
   const locale = useLocale();
   const [isShow, setIsShow] = useState(false);
   const t = useTranslations('Sections.intro');
-  const [form] = useForm();
+  const [form] = Form.useForm();
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    console.log(form.getFieldsValue());
+    console.log('form submitted');
   };
 
   return (
@@ -37,16 +37,16 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
           <div className="relative">
             <Form
               form={form}
-              onSubmit={onSubmit}
+              onFinish={onSubmit}
               className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
             >
-              <Input
-                name="name"
-                prefix={<User2 size={22} strokeWidth={1} />}
-                placeholder={t('form.name')}
-                size="large"
-                className="col-span-1"
-              />
+              <Form.Item className="mb-0 col-span-1" name="name">
+                <Input
+                  prefix={<User2 size={22} strokeWidth={1} />}
+                  placeholder={t('form.name')}
+                  size="large"
+                />
+              </Form.Item>
               <Input
                 name="phone"
                 prefix={<Phone size={22} strokeWidth={1} />}
@@ -70,13 +70,13 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
                 className={`col-span-1 ${!isShow ? 'order-1' : ''}`}
                 type="number"
               />
-              <Button
-                type="primary"
-                className={`h-full col-span-1 sm:col-span-2 md:col-span-1 ${isShow ? 'order-1' : ''}`}
-                size="large"
+              <Form.Item
+                className={`!mb-0 h-full col-span-1 sm:col-span-2 md:col-span-1 ${isShow ? 'order-1' : ''}`}
               >
-                {t('form.reserve')}
-              </Button>
+                <Button type="primary" size="large" htmlType="submit">
+                  {t('form.reserve')}
+                </Button>
+              </Form.Item>
               <Select
                 placeholder={t('form.reserveType')}
                 className={`col-span-1`}

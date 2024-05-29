@@ -32,7 +32,7 @@
     "socials": {
       "title": "Социалдык тармактар"
     },
-    "copyright": "© 2022 recreation-center. Байлыктар жана коргонуу корголо!"
+    "copyright": "© {year} {copyright}. Байлыктар жана коргонуу корголо!"
   },
   "Sections": {
     "intro": {

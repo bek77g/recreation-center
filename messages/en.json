@@ -32,7 +32,7 @@
     "socials": {
       "title": "Social networks"
     },
-    "copyright": "© 2022 recreation-center. All rights reserved."
+    "copyright": "© {year} {copyright}. All rights reserved."
   },
   "Sections": {
     "intro": {

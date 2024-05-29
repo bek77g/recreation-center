@@ -1,7 +1,7 @@
 import { Logo } from '@/components/ui';
 import { ROUTES } from '@/constants/links.constants';
 import { Facebook, Instagram } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 interface IFooter {}
@@ -59,6 +59,10 @@ const socials: { icon: any; href: string; label: string }[] = [
 
 export function Footer({}: IFooter) {
   const t = useTranslations();
+  const locale = useLocale();
+
+  const year = new Date().getFullYear();
+  const copyright = 'Zheenkulov Beknur';
 
   return (
     <footer className="bg-[#2a2a2a] text-white pt-14 pb-10">
@@ -70,7 +74,7 @@ export function Footer({}: IFooter) {
           <ul className="flex flex-col gap-y-2">
             {navigation.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{t(item.title)}</Link>
+                <Link href={`/${locale}${item.href}`}>{t(item.title)}</Link>
               </li>
             ))}
           </ul>
@@ -100,7 +104,7 @@ export function Footer({}: IFooter) {
           </ul>
         </div>
       </div>
-      <p className="container text-[#909090] mt-8">{t('Footer.copyright')}</p>
+      <p className="container text-[#909090] mt-8">{t('Footer.copyright', { year, copyright })}</p>
     </footer>
   );
 }
