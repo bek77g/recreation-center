@@ -82,7 +82,7 @@ export function Header({}: IHeader) {
       }`}
     >
       <div className="container flex gap-10 whitespace-nowrap justify-between items-center [font-size:_clamp(14px,2vw,18px)]">
-        <div className="relative z-10">
+        <div className="relative z-10 w-[150px]">
           <Link href={`/${locale}${ROUTES.home}`}>
             <Logo />
           </Link>
@@ -116,7 +116,7 @@ export function Header({}: IHeader) {
           </div>
         ) : (
           <>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center md:w-[150px] md:justify-end">
               {!isTablet ? <LanguageSelector /> : null}
               {/* <button className="rounded-3xl py-[10px] w-[128px] text-center font-medium bg-gradient-to-r hover:bg-gradient-to-l from-blue-900 to-blue-950 text-white">
                 {t('Header.reserveButton')}
