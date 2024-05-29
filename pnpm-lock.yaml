@@ -47,6 +47,9 @@ dependencies:
   contentful-management:
     specifier: ^11.26.2
     version: 11.26.2
+  dayjs:
+    specifier: ^1.11.11
+    version: 1.11.11
   eslint-config-next:
     specifier: ^14.2.3
     version: 14.2.3(eslint@8.57.0)(typescript@5.4.5)

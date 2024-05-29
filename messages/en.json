@@ -8,7 +8,9 @@
   },
   "Form": {
     "required": "Required field",
-    "requiredFields": "Required fields: {fields}"
+    "requiredFields": "Required fields: {fields}",
+    "success": "Success",
+    "successApplication": "Successfully reserved"
   },
   "Navigation": {
     "home": "Home",

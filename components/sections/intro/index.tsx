@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import bgIntro from '@/assets/images/bg-intro.jpg';
 import { TypeReserveTypeFields } from '@/types/contentful';
 import { postApplicationForm } from '@/utils/fetch';
+import dayjs from 'dayjs';
 import { ArrowDownToLine, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
 import { useState } from 'react';
 
@@ -36,8 +37,19 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
       return;
     }
 
-    const res = await postApplicationForm();
-    console.log(data);
+    const res = await postApplicationForm({
+      ...data,
+      dateIn: dayjs(data.dates[0]).format('YYYY-MM-DD'),
+      dateOut: dayjs(data.dates[1]).format('YYYY-MM-DD'),
+    });
+
+    if (res.isDraft) {
+      api.success({
+        message: tForm('successApplication'),
+        placement: 'top',
+      });
+      form.resetFields();
+    }
   };
 
   return (
@@ -100,7 +112,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
                   <Select
                     placeholder={t('form.reserveType')}
                     options={reserveTypes.map((reserveType) => ({
-                      value: reserveType.slug,
+                      value: reserveType.id,
                       label: reserveType[`label_${locale}`],
                     }))}
                     size="large"

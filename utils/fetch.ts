@@ -5,7 +5,7 @@ export const getReserveTypes = async () => {
     content_type: 'reserveType',
   });
 
-  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
+  return res.items.reduce((acc, rec) => [...acc, { ...rec.fields, id: rec.sys.id }], []);
 };
 
 export const getProvidesData = async () => {
@@ -24,17 +24,45 @@ export const getGalleryData = async (name: string = '') => {
   return res.items.reduce((acc, rec) => [...acc, rec.fields], []).find((el) => el.name === name);
 };
 
-export const postApplicationForm = async () => {
+export const getApplications = async () => {
+  const res = await client.getEntries({
+    content_type: 'application',
+  });
+
+  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
+};
+
+export const postApplicationForm = async (body) => {
   const res = await clientManagement();
   const data = await res.createEntry('application', {
-    en: {
-      name: 'QWW',
-      phone: 0,
-      note: '',
-      quests: 0,
-      dateIn: Date.now(),
-      dateOut: Date.now(),
-      reserveType: 0,
+    fields: {
+      name: {
+        en: body.name,
+      },
+      phone: {
+        en: parseInt(body.phone),
+      },
+      note: {
+        en: body.note,
+      },
+      quests: {
+        en: body.quests,
+      },
+      dateIn: {
+        en: body.dateIn,
+      },
+      dateOut: {
+        en: body.dateOut,
+      },
+      reserveType: {
+        en: {
+          sys: {
+            linkType: 'Entry',
+            id: body.reserveType,
+          },
+        },
+      },
     },
   });
+  return data;
 };

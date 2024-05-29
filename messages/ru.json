@@ -8,7 +8,9 @@
   },
   "Form": {
     "required": "Обязательное поле",
-    "requiredFields": "Обязательные поля: {fields}"
+    "requiredFields": "Обязательные поля: {fields}",
+    "success": "Успешно",
+    "successApplication": "Успешно забронировано"
   },
   "Navigation": {
     "home": "Главная",
