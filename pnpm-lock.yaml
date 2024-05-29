@@ -26,6 +26,9 @@ dependencies:
   antd:
     specifier: ^5.17.2
     version: 5.17.2(react-dom@18.3.1)(react@18.3.1)
+  antd-mask-input:
+    specifier: ^2.0.7
+    version: 2.0.7(antd@5.17.2)(react@18.3.1)
   aos:
     specifier: ^2.3.4
     version: 2.3.4
@@ -68,6 +71,9 @@ dependencies:
   react-dom:
     specifier: ^18
     version: 18.3.1(react@18.3.1)
+  react-input-mask:
+    specifier: ^2.0.4
+    version: 2.0.4(react-dom@18.3.1)(react@18.3.1)
   swiper:
     specifier: ^11.1.3
     version: 11.1.3
@@ -1271,6 +1277,17 @@ packages:
 
   /ansicolors@0.3.2:
     resolution: {integrity: sha512-QXu7BPrP29VllRxH8GwB7x5iX5qWKAAMLqKQGWTeLWVlNHNOpVMJ91dsxQAIWXpjuW5wqvxu3Jd/nRjrJ+0pqg==}
+
+  /antd-mask-input@2.0.7(antd@5.17.2)(react@18.3.1):
+    resolution: {integrity: sha512-EFv/Hjar5nzYuzvgCcIeEcbVzw5+4RynUQTl2S8bLMaR9iajiWoeV/VYvENaP6X+ytnM0OqemE2pHY9ZRR6hEw==}
+    peerDependencies:
+      antd: '>=4.19.0'
+      react: '>=16.0.0'
+    dependencies:
+      antd: 5.17.2(react-dom@18.3.1)(react@18.3.1)
+      imask: 6.4.2
+      react: 18.3.1
+    dev: false
 
   /antd@5.17.2(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-LVCR4kKWoNwaOEfYuWuXqwrK24W6YY6jlzROB4dTEEFvb2ovPi/5h9GcEB8U7ZJY/Yuvm1ehvRm9vohxVJzC3A==}
@@ -3596,6 +3613,11 @@ packages:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
 
+  /imask@6.4.2:
+    resolution: {integrity: sha512-xvEgbTdk6y2dW2UAysq0NRPmO6PuaXM5NHIt4TXEJEwXUHj26M0p/fXqyrSJdNXFaGVOtqYjPRnNdrjQQhDuuA==}
+    engines: {npm: '>=4.0.0'}
+    dev: false
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -3713,6 +3735,12 @@ packages:
       '@formatjs/fast-memoize': 2.2.0
       '@formatjs/icu-messageformat-parser': 2.7.6
       tslib: 2.6.2
+    dev: false
+
+  /invariant@2.2.4:
+    resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
+    dependencies:
+      loose-envify: 1.4.0
     dev: false
 
   /is-array-buffer@3.0.4:
@@ -5693,6 +5721,18 @@ packages:
       scheduler: 0.23.2
     dev: false
 
+  /react-input-mask@2.0.4(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-1hwzMr/aO9tXfiroiVCx5EtKohKwLk/NT8QlJXHQ4N+yJJFyUuMT+zfTpLBwX/lK3PkuMlievIffncpMZ3HGRQ==}
+    peerDependencies:
+      react: '>=0.14.0'
+      react-dom: '>=0.14.0'
+    dependencies:
+      invariant: 2.2.4
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      warning: 4.0.3
+    dev: false
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
@@ -6688,6 +6728,12 @@ packages:
 
   /w-json@1.3.10:
     resolution: {integrity: sha512-XadVyw0xE+oZ5FGApXsdswv96rOhStzKqL53uSe5UaTadABGkWIg1+DTx8kiZ/VqTZTBneoL0l65RcPe4W3ecw==}
+    dev: false
+
+  /warning@4.0.3:
+    resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
+    dependencies:
+      loose-envify: 1.4.0
     dev: false
 
   /wcwidth@1.0.1:

@@ -1,6 +1,7 @@
 'use client';
 
 import { Button, DatePicker, Form, Input, notification, Select } from 'antd';
+import MaskedInput from 'antd-mask-input';
 import { useLocale, useTranslations } from 'next-intl';
 
 import bgIntro from '@/assets/images/bg-intro.jpg';
@@ -25,6 +26,8 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
 
   const onSubmit = async (data: any) => {
     const requiredFields = ['name', 'phone'];
+    const phone = data.phone.replace(/\D/g, '') as string;
+
     if (requiredFields.some((field) => !data[field])) {
       api.error({
         message: tForm('required'),
@@ -37,10 +40,20 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
       return;
     }
 
+    if (phone.length < 10) {
+      api.error({
+        message: tForm('required'),
+        description: t('form.phone'),
+        placement: 'top',
+      });
+      return;
+    }
+
     const res = await postApplicationForm({
       ...data,
-      dateIn: dayjs(data.dates[0]).format('YYYY-MM-DD'),
-      dateOut: dayjs(data.dates[1]).format('YYYY-MM-DD'),
+      phone,
+      dateIn: data?.dates?.length ? dayjs(data.dates[0]).format('YYYY-MM-DD') : null,
+      dateOut: data?.dates?.length ? dayjs(data.dates[1]).format('YYYY-MM-DD') : null,
     });
 
     if (res.isDraft) {
@@ -79,7 +92,8 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
                   />
                 </Form.Item>
                 <Form.Item className="!mb-0 col-span-1" name="phone">
-                  <Input
+                  <MaskedInput
+                    mask="996 000 00 00"
                     prefix={<Phone size={22} strokeWidth={1} />}
                     placeholder={t('form.phone')}
                     size="large"
