@@ -6,6 +6,10 @@
   "Actions": {
     "more": "Подробнее"
   },
+  "Form": {
+    "required": "Обязательное поле",
+    "requiredFields": "Обязательные поля: {fields}"
+  },
   "Navigation": {
     "home": "Главная",
     "healing": "Лечение",

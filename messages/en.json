@@ -6,6 +6,10 @@
   "Actions": {
     "more": "More"
   },
+  "Form": {
+    "required": "Required field",
+    "requiredFields": "Required fields: {fields}"
+  },
   "Navigation": {
     "home": "Home",
     "healing": "Healing",

@@ -6,6 +6,10 @@
   "Actions": {
     "more": "Кененирээк"
   },
+  "Form": {
+    "required": "Милдеттүү талаа",
+    "requiredFields": "Милдеттүү талаалар: {fields}"
+  },
   "Navigation": {
     "home": "Башкы",
     "healing": "Дарылоо",
