@@ -40,57 +40,60 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
               onFinish={onSubmit}
               className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
             >
-              <Form.Item className="mb-0 col-span-1" name="name">
+              <Form.Item className="!mb-0 col-span-1" name="name">
                 <Input
                   prefix={<User2 size={22} strokeWidth={1} />}
                   placeholder={t('form.name')}
                   size="large"
                 />
               </Form.Item>
-              <Input
-                name="phone"
-                prefix={<Phone size={22} strokeWidth={1} />}
-                placeholder={t('form.phone')}
-                size="large"
-                className="col-span-1"
-                type="tel"
-              />
-              <Input
-                name="notes"
-                prefix={<ListIcon size={22} strokeWidth={1} />}
-                placeholder={t('form.notes')}
-                size="large"
-                className="col-span-1 sm:col-span-2 md:col-span-1"
-              />
-              <Input
-                name="quests"
-                prefix={<UsersRound size={22} strokeWidth={1} />}
-                placeholder={t('form.quests')}
-                size="large"
-                className={`col-span-1 ${!isShow ? 'order-1' : ''}`}
-                type="number"
-              />
+              <Form.Item className="!mb-0 col-span-1" name="phone">
+                <Input
+                  prefix={<Phone size={22} strokeWidth={1} />}
+                  placeholder={t('form.phone')}
+                  size="large"
+                  type="tel"
+                />
+              </Form.Item>
+              <Form.Item className="!mb-0 col-span-1 sm:col-span-2 md:col-span-1" name="notes">
+                <Input
+                  prefix={<ListIcon size={22} strokeWidth={1} />}
+                  placeholder={t('form.notes')}
+                  size="large"
+                />
+              </Form.Item>
+              <Form.Item className={`!mb-0 col-span-1 ${!isShow ? 'order-1' : ''}`} name="quests">
+                <Input
+                  prefix={<UsersRound size={22} strokeWidth={1} />}
+                  placeholder={t('form.quests')}
+                  size="large"
+                  type="number"
+                />
+              </Form.Item>
               <Form.Item
                 className={`!mb-0 h-full col-span-1 sm:col-span-2 md:col-span-1 ${isShow ? 'order-1' : ''}`}
               >
-                <Button type="primary" size="large" htmlType="submit">
+                <Button type="primary" size="large" htmlType="submit" className="w-full">
                   {t('form.reserve')}
                 </Button>
               </Form.Item>
-              <Select
-                placeholder={t('form.reserveType')}
-                className={`col-span-1`}
-                options={reserveTypes.map((reserveType) => ({
-                  value: reserveType.slug,
-                  label: reserveType[`label_${locale}`],
-                }))}
-                size="large"
-              />
-              <DatePicker.RangePicker
-                placeholder={[t('form.dateIn'), t('form.dateOut')]}
-                className="col-span-1 sm:col-span-2"
-                size="large"
-              />
+              <Form.Item className="!mb-0 col-span-1" name="reserveType">
+                <Select
+                  placeholder={t('form.reserveType')}
+                  options={reserveTypes.map((reserveType) => ({
+                    value: reserveType.slug,
+                    label: reserveType[`label_${locale}`],
+                  }))}
+                  size="large"
+                />
+              </Form.Item>
+              <Form.Item className="!mb-0 col-span-1 sm:col-span-2" name="dates">
+                <DatePicker.RangePicker
+                  className="w-full"
+                  placeholder={[t('form.dateIn'), t('form.dateOut')]}
+                  size="large"
+                />
+              </Form.Item>
             </Form>
             <div
               className="absolute -translate-x-1/2 left-1/2 top-full translate-y-4 cursor-pointer bg-blue-600 p-1 rounded"
