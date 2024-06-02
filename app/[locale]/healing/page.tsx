@@ -1,8 +1,15 @@
 import bgIntro from '@/assets/images/bg-healing.png';
 import healingOne from '@/assets/images/healing-one.png';
 import healingSecond from '@/assets/images/healing-second.png';
+import { NO_INDEX_PAGE } from '@/constants/seo.constants';
+import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Лечение | Рекреaционый ресурс Кыргызской Республики',
+  ...NO_INDEX_PAGE,
+};
 
 export default function Page() {
   const t = useTranslations('Sections');

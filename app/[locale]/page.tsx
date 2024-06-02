@@ -5,6 +5,14 @@ import { IntroSection } from '@/components/sections/intro';
 import { ProvideSection } from '@/components/sections/provide';
 import { getApplications, getGalleryData, getProvidesData, getReserveTypes } from '@/utils/fetch';
 
+import { NO_INDEX_PAGE } from '@/constants/seo.constants';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Рекреaционый ресурс Кыргызской Республики',
+  ...NO_INDEX_PAGE,
+};
+
 export default async function Home() {
   const reserveTypes = await getReserveTypes();
   const provideData = await getProvidesData();
