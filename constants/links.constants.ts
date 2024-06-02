@@ -3,5 +3,6 @@ export const ROUTES: Record<string, string> = {
   attractions: '/attractions',
   healing: '/healing',
   about: '/about',
+  map: '/map',
   attractions: '/attractions',
 };

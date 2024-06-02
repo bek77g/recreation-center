@@ -20,8 +20,8 @@ const navigation: { title: string; href: string }[] = [
     href: ROUTES.healing,
   },
   {
-    title: 'Navigation.about',
-    href: ROUTES.about,
+    title: 'Navigation.map',
+    href: ROUTES.map,
   },
 ];
 

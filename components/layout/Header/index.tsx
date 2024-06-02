@@ -70,8 +70,8 @@ export function Header({}: IHeader) {
       href: ROUTES.healing,
     },
     {
-      title: 'about',
-      href: ROUTES.about,
+      title: 'map',
+      href: ROUTES.map,
     },
   ];
 
