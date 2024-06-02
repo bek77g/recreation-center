@@ -5,6 +5,7 @@ import MaskedInput from 'antd-mask-input';
 import { useLocale, useTranslations } from 'next-intl';
 
 import bgIntro from '@/assets/images/bg-intro.jpg';
+import { useWindowWidth } from '@/hooks';
 import { TypeReserveTypeFields } from '@/types/contentful';
 import { postApplicationForm } from '@/utils/fetch';
 import dayjs from 'dayjs';
@@ -19,6 +20,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
   const t = useTranslations('Sections.intro');
   const tForm = useTranslations('Form');
   const locale = useLocale();
+  const windowWidth = useWindowWidth();
   const [api, contextHolder] = notification.useNotification();
 
   const [isShow, setIsShow] = useState(false);
@@ -82,7 +84,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
               <Form
                 form={form}
                 onFinish={onSubmit}
-                className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? '!h-[40px]' : ''}`}
+                className={`transition-all duration-300 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-flow-row gap-4 w-full justify-center items-center overflow-hidden h-full ${!isShow ? `${windowWidth < 640 ? '!h-[208px]' : windowWidth < 768 ? '!h-[152px]' : '!h-[40px]'}` : ''}`}
               >
                 <Form.Item className="!mb-0 col-span-1" name="name">
                   <Input
@@ -111,6 +113,12 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
                   <Input
                     prefix={<UsersRound size={22} strokeWidth={1} />}
                     placeholder={t('form.quests')}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, '');
+                      const numberValue = parseInt(value, 10);
+                      const finalValue = numberValue >= 0 ? numberValue : null;
+                      form.setFieldValue('quests', finalValue);
+                    }}
                     size="large"
                     type="number"
                   />
