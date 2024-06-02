@@ -27,19 +27,15 @@ const navigation: { title: string; href: string }[] = [
 
 const contacts: { value: string; type: 'tel' | 'mailto' }[] = [
   {
-    value: '+996 999-99-99-99',
+    value: '+996 701-15-15-39',
     type: 'tel',
   },
   {
-    value: '+996 505-99-99-99',
+    value: '+996 707-26-05-68',
     type: 'tel',
   },
   {
-    value: '+996 312-99-99-99',
-    type: 'tel',
-  },
-  {
-    value: 'wXQp3@example.com',
+    value: 'd.zheenkul@gmail.com',
     type: 'mailto',
   },
 ];
@@ -48,12 +44,12 @@ const socials: { icon: any; href: string; label: string }[] = [
   {
     icon: <Facebook />,
     href: 'https://facebook.com',
-    label: '/name.kg',
+    label: '/issyk-kol-kg',
   },
   {
     icon: <Instagram />,
     href: 'https://instagram.com',
-    label: 'name.kg',
+    label: 'issyk-kol-kg',
   },
 ];
 
