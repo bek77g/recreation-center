@@ -100,7 +100,7 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
                     type="tel"
                   />
                 </Form.Item>
-                <Form.Item className="!mb-0 col-span-1 sm:col-span-2 md:col-span-1" name="notes">
+                <Form.Item className="!mb-0 col-span-1 sm:col-span-2 md:col-span-1" name="note">
                   <Input
                     prefix={<ListIcon size={22} strokeWidth={1} />}
                     placeholder={t('form.notes')}

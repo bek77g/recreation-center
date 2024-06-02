@@ -46,7 +46,7 @@ export const postApplicationForm = async (body) => {
         en: body.note,
       },
       quests: {
-        en: body.quests,
+        en: parseInt(body.quests),
       },
       dateIn: {
         en: body.dateIn,
