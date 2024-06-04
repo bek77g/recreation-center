@@ -32,6 +32,14 @@ export const getApplications = async () => {
   return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
 };
 
+export const getHealings = async () => {
+  const res = await client.getEntries({
+    content_type: 'application',
+  });
+
+  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
+};
+
 export const postApplicationForm = async (body) => {
   const res = await clientManagement();
   const data = await res.createEntry('application', {
