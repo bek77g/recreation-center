@@ -20,6 +20,15 @@ export default async function HealingPage() {
 
   return (
     <>
+      <Image
+        src={bgIntro.src}
+        alt="background"
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="hidden"
+        priority
+      />
       <section
         className="my-24 relative py-40 w-full"
         style={{ backgroundImage: `url(${bgIntro.src})` }}

@@ -10,6 +10,7 @@ import { TypeReserveTypeFields } from '@/types/contentful';
 import { postApplicationForm } from '@/utils/fetch';
 import dayjs from 'dayjs';
 import { ArrowDownToLine, ListIcon, Phone, User2, UsersRound } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface IIntroSectionProps {
@@ -69,6 +70,15 @@ export function IntroSection({ reserveTypes }: IIntroSectionProps) {
 
   return (
     <>
+      <Image
+        src={bgIntro.src}
+        alt="background"
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="hidden"
+        priority
+      />
       {contextHolder}
       <section
         className="relative h-screen w-full before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[#02345a52] before:z-10 min-h-[510px]"
