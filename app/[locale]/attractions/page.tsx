@@ -17,14 +17,20 @@ const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
 
   return (
     <section className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14 grid-y-10 !py-14">
-      <Image
-        src={`https:${data.cover[0].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1 md:col-span-2"
-      />
+      <a
+        href={`https:${data.cover[0].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className=" col-span-1 md:col-span-2"
+      >
+        <Image
+          src={`https:${data.cover[0].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
       <article className="col-span-1 md:col-span-2">
         <h2 className="section-title">{data[`title_${locale}`]}</h2>
         {descriptionArr.map((item, index) => (
@@ -34,30 +40,48 @@ const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
           </>
         ))}
       </article>
-      <Image
-        src={`https:${data.cover[1].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1"
-      />
-      <Image
-        src={`https:${data.cover[2].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1 md:col-span-2"
-      />
-      <Image
-        src={`https:${data.cover[3].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1"
-      />
+      <a
+        href={`https:${data.cover[1].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1"
+      >
+        <Image
+          src={`https:${data.cover[1].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
+      <a
+        href={`https:${data.cover[2].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1 md:col-span-2"
+      >
+        <Image
+          src={`https:${data.cover[2].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
+      <a
+        href={`https:${data.cover[3].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1"
+      >
+        <Image
+          src={`https:${data.cover[3].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover "
+        />
+      </a>
     </section>
   );
 };
@@ -82,30 +106,48 @@ const ThreeImageSection = ({ data }: { data: TypeAttractionsFields }) => {
           </>
         ))}
       </article>
-      <Image
-        src={`https:${data.cover[0].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1 md:col-span-6"
-      />
-      <Image
-        src={`https:${data.cover[1].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1 sm:col-span-5"
-      />
-      <Image
-        src={`https:${data.cover[2].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1 sm:col-span-5"
-      />
+      <a
+        href={`https:${data.cover[0].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1 md:col-span-6"
+      >
+        <Image
+          src={`https:${data.cover[0].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
+      <a
+        href={`https:${data.cover[1].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1 sm:col-span-5"
+      >
+        <Image
+          src={`https:${data.cover[1].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
+      <a
+        href={`https:${data.cover[2].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1 sm:col-span-5"
+      >
+        <Image
+          src={`https:${data.cover[2].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
     </section>
   );
 };
@@ -123,14 +165,20 @@ const TwoImageSection = ({ data, idx }: { data: TypeAttractionsFields; idx?: num
 
   return (
     <section className="container grid grid-cols-1 md:grid-cols-2 gap-14 grid-y-10 !py-14">
-      <Image
-        src={`https:${data.cover[0].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1 row-span-1 md:row-span-2"
-      />
+      <a
+        href={`https:${data.cover[0].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1 row-span-1 md:row-span-2"
+      >
+        <Image
+          src={`https:${data.cover[0].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover "
+        />
+      </a>
       <article className={`col-span-1 ${isEven ? 'order-[-1]' : ''}`}>
         <h2 className="section-title">{data[`title_${locale}`]}</h2>
         {descriptionArr.map((item, index) => (
@@ -140,14 +188,20 @@ const TwoImageSection = ({ data, idx }: { data: TypeAttractionsFields; idx?: num
           </>
         ))}
       </article>
-      <Image
-        src={`https:${data.cover[1].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className={`w-full h-full object-cover col-span-1 ${isEven ? 'order-3' : ''}`}
-      />
+      <a
+        href={`https:${data.cover[1].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className={`col-span-1 ${isEven ? 'order-3' : ''}`}
+      >
+        <Image
+          src={`https:${data.cover[1].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
     </section>
   );
 };
@@ -163,14 +217,20 @@ const TwoImageSection2 = ({ data }: { data: TypeAttractionsFields }) => {
 
   return (
     <section className="container grid grid-cols-1 md:grid-cols-2 gap-14 grid-y-10 !py-14">
-      <Image
-        src={`https:${data.cover[0].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1"
-      />
+      <a
+        href={`https:${data.cover[0].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1"
+      >
+        <Image
+          src={`https:${data.cover[0].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover"
+        />
+      </a>
       <article className="col-span-1">
         <h2 className="section-title">{data[`title_${locale}`]}</h2>
         {descriptionArr.map((item, index) => (
@@ -180,14 +240,20 @@ const TwoImageSection2 = ({ data }: { data: TypeAttractionsFields }) => {
           </>
         ))}
       </article>
-      <Image
-        src={`https:${data.cover[0].fields.file?.url}`}
-        width="0"
-        height="0"
-        sizes="100vw"
-        alt="boomskoe-ushchele"
-        className="w-full h-full object-cover col-span-1 md:col-span-2"
-      />
+      <a
+        href={`https:${data.cover[1].fields.file?.url}`}
+        data-fancybox={data[`title_${locale}`]}
+        className="col-span-1 md:col-span-2"
+      >
+        <Image
+          src={`https:${data.cover[1].fields.file?.url}`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          alt="boomskoe-ushchele"
+          className="w-full h-full object-cover "
+        />
+      </a>
     </section>
   );
 };

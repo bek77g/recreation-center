@@ -19,14 +19,20 @@ export function ProvideSection({ data = [] }: IProvideSectionProps) {
           .filter((item) => item.type === 'provide')
           .map((item) => (
             <div className="flex flex-col gap-4 my-4 drop-shadow-lg" key={item.cover?.sys.id}>
-              <Image
-                src={`https:${item.cover?.fields.file?.url}`}
-                alt={item.cover?.fields.title}
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="w-full h-[280px] object-cover"
-              />
+              <a
+                href={`https:${item.cover?.fields.file?.url}`}
+                data-fancybox="provide"
+                data-caption={item[`description_${locale}`]}
+              >
+                <Image
+                  src={`https:${item.cover?.fields.file?.url}`}
+                  alt={item.cover?.fields.title}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-full h-[280px] object-cover"
+                />
+              </a>
               <div className="w-full px-4">
                 <h4 className="font-bold [font-family:_var(--second-family)] [font-size:_clamp(18px,5vw,30px)]">
                   {item[`title_${locale}`]}
@@ -42,14 +48,21 @@ export function ProvideSection({ data = [] }: IProvideSectionProps) {
           .filter((item) => item.type === 'culture')
           .map((item) => (
             <div className="flex gap-4 my-4 drop-shadow-lg" key={item.cover?.sys.id}>
-              <Image
-                src={`https:${item.cover?.fields.file?.url}`}
-                alt={item.cover?.fields.title}
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="w-1/3 h-auto"
-              />
+              <a
+                href={`https:${item.cover?.fields.file?.url}`}
+                data-fancybox="culture"
+                data-caption={item[`description_${locale}`]}
+                className="inline-block w-1/3"
+              >
+                <Image
+                  src={`https:${item.cover?.fields.file?.url}`}
+                  alt={item.cover?.fields.title}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-full h-full"
+                />
+              </a>
               <div className="w-2/3">
                 <h4 className="font-bold">{item[`title_${locale}`]}</h4>
                 <p>{item[`description_${locale}`]}</p>
