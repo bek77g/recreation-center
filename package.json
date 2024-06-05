@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "cf-export": "contentful space export --config contentful/export-config.json --management-token CFPAT-p9Hhvd6rSTZ9hr28Cn0-r0FSIkBzDH0G5a7BJNQCnP0 --space-id 0wvqwyal57dn",
-    "cf-generate-types": "cf-content-types-generator contentful/export.json --out types/contentful"
+    "cf-generate-types": "cf-content-types-generator contentful/export.json --out types/contentful",
+    "cf-types-update": "pnpm cf-export && pnpm cf-generate-types"
   },
   "eslintConfig": {
     "extends": "next"

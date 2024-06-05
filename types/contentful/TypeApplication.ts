@@ -5,10 +5,10 @@ export interface TypeApplicationFields {
     name: EntryFields.Symbol;
     phone: EntryFields.Integer;
     note?: EntryFields.Symbol;
-    quests: EntryFields.Integer;
-    dateIn: EntryFields.Date;
+    quests?: EntryFields.Integer;
+    dateIn?: EntryFields.Date;
     dateOut?: EntryFields.Date;
-    reserveType: Entry<TypeReserveTypeFields>;
+    reserveType?: Entry<TypeReserveTypeFields>;
 }
 
 export type TypeApplication = Entry<TypeApplicationFields>;

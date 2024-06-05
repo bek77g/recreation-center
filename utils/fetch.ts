@@ -34,7 +34,7 @@ export const getApplications = async () => {
 
 export const getHealings = async () => {
   const res = await client.getEntries({
-    content_type: 'application',
+    content_type: 'healing',
   });
 
   return res.items.reduce((acc, rec) => [...acc, rec.fields], []);

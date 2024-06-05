@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ...NO_INDEX_PAGE,
 };
 
-export default async function Home() {
+export default async function HomePage() {
   const reserveTypes = await getReserveTypes();
   const provideData = await getProvidesData();
   const galleryData = await getGalleryData('HomePage');

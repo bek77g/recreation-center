@@ -1,9 +1,11 @@
 import bgIntro from '@/assets/images/bg-healing.png';
-import healingOne from '@/assets/images/healing-one.png';
 import healingSecond from '@/assets/images/healing-second.png';
 import { NO_INDEX_PAGE } from '@/constants/seo.constants';
+import { TypeHealingFields } from '@/types/contentful';
+import { getHealings } from '@/utils/fetch';
 import { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
@@ -11,8 +13,10 @@ export const metadata: Metadata = {
   ...NO_INDEX_PAGE,
 };
 
-export default function Page() {
-  const t = useTranslations('Sections');
+export default async function HealingPage() {
+  const t = await getTranslations('Sections');
+  const locale = useLocale();
+  const healingData: TypeHealingFields[] = await getHealings();
 
   return (
     <>
@@ -27,7 +31,40 @@ export default function Page() {
       <h2 className="section-title-large">
         <span>{t('healing-section.title')}</span>
       </h2>
-      <section className="container grid grid-cols-3 items-center !mb-10">
+      {healingData.map((item, idx) => (
+        <section
+          className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center !mb-10"
+          key={item.list_en}
+        >
+          <Image
+            className="col-span-1 w-full"
+            src={`https://${item.cover[0].fields.file?.url}`}
+            width="0"
+            height="0"
+            sizes="100vw"
+            alt="healing-one"
+          />
+          <Image
+            className="col-span-1 w-full"
+            src={healingSecond.src}
+            width="0"
+            height="0"
+            sizes="100vw"
+            alt="healing-one"
+          />
+          <div
+            className={`col-span-1 px-[18px] md:px-[40px] py-[20px] md:py-[90px] ${idx % 2 === 0 ? 'order-[-1]' : ''}`}
+          >
+            <h4 className="section-title text-[30px] md:text-[40px]">{item[`title_${locale}`]}</h4>
+            <ul>
+              {item[`list_${locale}`].map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ))}
+      {/* <section className="container grid grid-cols-3 items-center !mb-10">
         <div className="col-span-1 px-[70px] md:px-[30px] py-[90px] md:py-[40px]">
           <h4 className="section-title text-[50px]">Очищение организма от токсинов</h4>
           <ul>
@@ -104,7 +141,7 @@ export default function Page() {
           sizes="100vw"
           alt="healing-one"
         />
-      </section>
+      </section> */}
       {/* <Map /> */}
     </>
   );
