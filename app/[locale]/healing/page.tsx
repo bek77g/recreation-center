@@ -48,7 +48,7 @@ export default async function HealingPage() {
         >
           <Image
             className="col-span-1 w-full"
-            src={`https://${item.cover[0].fields.file?.url}`}
+            src={`https:${item.cover[0].fields.file?.url}`}
             width="0"
             height="0"
             sizes="100vw"
@@ -74,85 +74,6 @@ export default async function HealingPage() {
           </div>
         </section>
       ))}
-      {/* <section className="container grid grid-cols-3 items-center !mb-10">
-        <div className="col-span-1 px-[70px] md:px-[30px] py-[90px] md:py-[40px]">
-          <h4 className="section-title text-[50px]">Очищение организма от токсинов</h4>
-          <ul>
-            <li>Водолечение</li>
-            <li>Грязелечение</li>
-            <li>Физиотерапия</li>
-          </ul>
-        </div>
-        <Image
-          className="col-span-1 w-full"
-          src={healingOne.src}
-          width="0"
-          height="0"
-          sizes="100vw"
-          alt="healing-one"
-        />
-        <Image
-          className="col-span-1 w-full"
-          src={healingSecond.src}
-          width="0"
-          height="0"
-          sizes="100vw"
-          alt="healing-one"
-        />
-      </section>
-      <section className="container grid grid-cols-3 items-center !mb-10">
-        <Image
-          className="col-span-1 w-full"
-          src={healingOne.src}
-          width="0"
-          height="0"
-          sizes="100vw"
-          alt="healing-one"
-        />
-        <Image
-          className="col-span-1 w-full"
-          src={healingSecond.src}
-          width="0"
-          height="0"
-          sizes="100vw"
-          alt="healing-one"
-        />
-        <div className="col-span-1 px-[70px] md:px-[30px] py-[90px] md:py-[40px]">
-          <h4 className="section-title text-[50px]">Очищение организма от токсинов</h4>
-          <ul>
-            <li>Водолечение</li>
-            <li>Грязелечение</li>
-            <li>Физиотерапия</li>
-          </ul>
-        </div>
-      </section>
-      <section className="container grid grid-cols-3 items-center !mb-10">
-        <div className="col-span-1 px-[70px] md:px-[30px] py-[90px] md:py-[40px]">
-          <h4 className="section-title text-[50px]">Очищение организма от токсинов</h4>
-          <ul>
-            <li>Водолечение</li>
-            <li>Грязелечение</li>
-            <li>Физиотерапия</li>
-          </ul>
-        </div>
-        <Image
-          className="col-span-1 w-full"
-          src={healingOne.src}
-          width="0"
-          height="0"
-          sizes="100vw"
-          alt="healing-one"
-        />
-        <Image
-          className="col-span-1 w-full"
-          src={healingSecond.src}
-          width="0"
-          height="0"
-          sizes="100vw"
-          alt="healing-one"
-        />
-      </section> */}
-      {/* <Map /> */}
     </>
   );
 }

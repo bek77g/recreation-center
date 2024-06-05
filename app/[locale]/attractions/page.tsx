@@ -18,7 +18,7 @@ const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
   return (
     <section className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-14 grid-y-10 !py-14">
       <Image
-        src={`https://${data.cover[0].fields.file?.url}`}
+        src={`https:${data.cover[0].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -35,7 +35,7 @@ const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
         ))}
       </article>
       <Image
-        src={`https://${data.cover[1].fields.file?.url}`}
+        src={`https:${data.cover[1].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -43,7 +43,7 @@ const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
         className="w-full h-full object-cover col-span-1"
       />
       <Image
-        src={`https://${data.cover[2].fields.file?.url}`}
+        src={`https:${data.cover[2].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -51,7 +51,7 @@ const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
         className="w-full h-full object-cover col-span-1 md:col-span-2"
       />
       <Image
-        src={`https://${data.cover[3].fields.file?.url}`}
+        src={`https:${data.cover[3].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -83,7 +83,7 @@ const ThreeImageSection = ({ data }: { data: TypeAttractionsFields }) => {
         ))}
       </article>
       <Image
-        src={`https://${data.cover[0].fields.file?.url}`}
+        src={`https:${data.cover[0].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -91,7 +91,7 @@ const ThreeImageSection = ({ data }: { data: TypeAttractionsFields }) => {
         className="w-full h-full object-cover col-span-1 md:col-span-6"
       />
       <Image
-        src={`https://${data.cover[1].fields.file?.url}`}
+        src={`https:${data.cover[1].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -99,7 +99,7 @@ const ThreeImageSection = ({ data }: { data: TypeAttractionsFields }) => {
         className="w-full h-full object-cover col-span-1 sm:col-span-5"
       />
       <Image
-        src={`https://${data.cover[2].fields.file?.url}`}
+        src={`https:${data.cover[2].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -124,7 +124,7 @@ const TwoImageSection = ({ data, idx }: { data: TypeAttractionsFields; idx?: num
   return (
     <section className="container grid grid-cols-1 md:grid-cols-2 gap-14 grid-y-10 !py-14">
       <Image
-        src={`https://${data.cover[0].fields.file?.url}`}
+        src={`https:${data.cover[0].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -141,7 +141,7 @@ const TwoImageSection = ({ data, idx }: { data: TypeAttractionsFields; idx?: num
         ))}
       </article>
       <Image
-        src={`https://${data.cover[1].fields.file?.url}`}
+        src={`https:${data.cover[1].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -164,7 +164,7 @@ const TwoImageSection2 = ({ data }: { data: TypeAttractionsFields }) => {
   return (
     <section className="container grid grid-cols-1 md:grid-cols-2 gap-14 grid-y-10 !py-14">
       <Image
-        src={`https://${data.cover[0].fields.file?.url}`}
+        src={`https:${data.cover[0].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
@@ -181,7 +181,7 @@ const TwoImageSection2 = ({ data }: { data: TypeAttractionsFields }) => {
         ))}
       </article>
       <Image
-        src={`https://${data.cover[0].fields.file?.url}`}
+        src={`https:${data.cover[0].fields.file?.url}`}
         width="0"
         height="0"
         sizes="100vw"
