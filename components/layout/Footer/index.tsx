@@ -64,6 +64,7 @@ export function Footer({ data }: IFooter) {
 
   const year = new Date().getFullYear();
 
+  const address = generalData[`address_${locale}`];
   const copyright = generalData.copyright;
   const facebook = generalData.facebook;
   const instagram = generalData.instagram;
@@ -85,7 +86,7 @@ export function Footer({ data }: IFooter) {
         </div>
         <div>
           <h3 className="font-playfair text-[24px] mb-6">{t('Footer.address.title')}</h3>
-          <p className="text-4">{t('Footer.address.text')}</p>
+          <p className="text-4">{address}</p>
         </div>
         <div>
           <h3 className="font-playfair text-[24px] mb-6">{t('Footer.contacts.title')}</h3>
