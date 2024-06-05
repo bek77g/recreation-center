@@ -649,6 +649,149 @@
           }
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "attractions",
+        "type": "ContentType",
+        "createdAt": "2024-06-05T16:31:53.477Z",
+        "updatedAt": "2024-06-05T16:31:54.246Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-06-05T16:31:54.246Z",
+        "firstPublishedAt": "2024-06-05T16:31:54.246Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/content_types/attractions"
+      },
+      "displayField": "title_ru",
+      "name": "Attractions",
+      "description": "",
+      "fields": [
+        {
+          "id": "title_ru",
+          "name": "Title RU",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title_ky",
+          "name": "Title KY",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title_en",
+          "name": "Title EN",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description_ru",
+          "name": "Description RU",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description_ky",
+          "name": "Description KY",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description_en",
+          "name": "Description EN",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cover",
+          "name": "Cover",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        }
+      ]
     }
   ],
   "tags": [
@@ -1038,6 +1181,87 @@
         {
           "fieldId": "list_en",
           "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cover",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "0wvqwyal57dn",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-06-05T16:31:54.448Z",
+        "createdBy": {
+          "sys": {
+            "id": "5WPx3kxv4W60pNfeYCAXkM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-05T16:31:55.317Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5WPx3kxv4W60pNfeYCAXkM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "attractions",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title_ru",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title_ky",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title_en",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description_ru",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description_ky",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description_en",
+          "widgetId": "multipleLine",
           "widgetNamespace": "builtin"
         },
         {
@@ -2499,6 +2723,555 @@
                 "type": "Link",
                 "linkType": "Asset",
                 "id": "3AK5zp2XrBCAiySuvUClMG"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "4Szmq7AL2HsYHn0h7ftRAQ",
+        "type": "Entry",
+        "createdAt": "2024-06-05T16:32:50.444Z",
+        "updatedAt": "2024-06-05T16:36:30.694Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2024-06-05T16:36:30.694Z",
+        "firstPublishedAt": "2024-06-05T16:36:30.694Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "attractions"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/4Szmq7AL2HsYHn0h7ftRAQ"
+      },
+      "fields": {
+        "title_ru": {
+          "en": "Боомское ущелье"
+        },
+        "title_ky": {
+          "en": "Боом капчыгайы"
+        },
+        "title_en": {
+          "en": "The Boomsky Gorge"
+        },
+        "description_ru": {
+          "en": "Одно из больших киргизских ущелий, находится в 112 километрах от столицы Кыргызстанаа – Бишкек. Через данное ущелье протекает небольшая река, под названием Чу, а общая протяженность природной достопримечательности составляет порядка 30 километров. Через Боом проложена и небольшая железнодорожная ветка, общей протяженностью в 180 километров.\n\n\nСеменов Петр, исследователь из России, пересек данное ущелье одним из первых еще в середине XIX столетия, а именно в 1850 году. После этого оно получило свое первое название, которое звучало как «Боом», что можно перевести как «Злой Дух». Происхождение этого названия было связано с личными записями исследователя, одна из строк звучит так – «Это ущелье является смертельной и опасной ловушкой. Мы с трудом продвигаемся по намеченному пути»."
+        },
+        "description_ky": {
+          "en": "Кыргызстандагы чоң капчыгайлардын бири Кыргызстандын борбору Бишкек шаарынан 112 чакырым алыстыкта жайгашкан. Аталган капчыгай аркылуу Чу деген кичинекей дарыя өтөт, ал эми табигый кооз жердин жалпы узундугу 30 чакырымды түзөт. Боом аркылуу жалпы узундугу 180 чакырымды түзгөн кичинекей темир жол линиясы да бар.\n\n\nРоссиялык изилдөөчү Семенов Петр бул капчыгайды кылымдын орто ченинде, тактап айтканда 1850-жылы биринчилерден болуп кесип өткөн. Андан кийин, ал \"жаман рух\" деп которула турган \"Боом\"сыяктуу угулган биринчи аталышын алды. Бул ысымдын келип чыгышы изилдөөчүнүн жеке жазууларына байланыштуу болгон, саптардын бири \"бул капчыгай өлүмгө дуушар болгон жана коркунучтуу тузак. Биз көздөгөн жолубуз менен араң басып баратабыз\"."
+        },
+        "description_en": {
+          "en": "One of the largest Kyrgyz gorges is located 112 kilometers from the capital of Kyrgyzstan – Bishkek. A small river called Chu flows through this gorge, and the total length of the natural attraction is about 30 kilometers. A small railway line with a total length of 180 kilometers has also been laid through the Boom.\n\n\nPeter Semenov, a researcher from Russia, was one of the first to cross this gorge in the middle of the XIX century, namely in 1850. After that, it got its first name, which sounded like \"Booom\", which can be translated as \"Evil Spirit\". The origin of this name was connected with the personal records of the researcher, one of the lines reads like this – \"This gorge is a deadly and dangerous trap. We are hardly moving along the planned path.\""
+        },
+        "cover": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7KZVirrHiofIQppTk0Ntif"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5AnpQq1dSaobysDvKOksaj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3S59Jfjvla2LYkwKl9usAO"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6h0FJADSG8HkTZGoE8ZUgP"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "3YkhLVyUJz79Pmd3tY9crW",
+        "type": "Entry",
+        "createdAt": "2024-06-05T16:41:27.482Z",
+        "updatedAt": "2024-06-05T16:43:16.402Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-06-05T16:43:16.402Z",
+        "firstPublishedAt": "2024-06-05T16:43:16.402Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "attractions"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/3YkhLVyUJz79Pmd3tY9crW"
+      },
+      "fields": {
+        "title_ru": {
+          "en": "Водопад «Девичьи слезы»"
+        },
+        "title_ky": {
+          "en": "\"Кыздын көз жашы\" шаркыратмасы"
+        },
+        "title_en": {
+          "en": "Waterfall \"Maiden's tears\""
+        },
+        "description_ru": {
+          "en": "Знаменитый водопад под весьма ироничным названием «Девичьи Слезы», находится в горном ущелье Джеты-Огуз, что расположилось западнее города Каракола. Если быть немного точнее, то оно находится в 32 километрах к востоку от озера Иссык-Куль.\n\n\nПервым делом предостережем вас от путешествий в дождливый день. Связано это с появлением труднопроходимости, тем самым появляется опасность восхождения. Плюс ко всему в том районе проложены довольно узкие тропинки и дорожки, которые размягчаются и размываются.\n\n\nСамый простой способ добраться до достопримечательности, это отправиться на экскурсию из города Каракол. Но такое путешествие можно провернуть и самим если знать правильную дорогу."
+        },
+        "description_ky": {
+          "en": "\"Кыздын көз жашы\" деп аталган атактуу шаркыратма Каракол шаарынын батыш тарабында жайгашкан Жети-Өгүз тоо капчыгайында жайгашкан. Тагыраак айтканда, ал Ысык-Көлдөн 32 чакырым чыгыш тарапта жайгашкан.\n\n\nБиринчи кезекте, жаан-чачындуу күнү саякаттоодон сак болуңуз. Бул кыйынчылыктын пайда болушу менен байланыштуу, ошону менен тоого чыгуу коркунучу пайда болот. Мындан тышкары, ошол аймакта жумшарып, эрозияга учураган тар Жолдор жана жолдор бар.\n\n\nАттракционго жетүүнүн эң оңой жолу-Каракол шаарынан экскурсияга Баруу. Бирок, бул жол туура жолду билип туруп, анда өзү да болот."
+        },
+        "description_en": {
+          "en": "The famous waterfall under the very ironic name \"Maiden's Tears\" is located in the Jety-Oguz mountain gorge, which is located west of the city of Karakol. To be a little more precise, it is located 32 kilometers east of Lake Issyk-Kul.\n\n\nFirst of all, we will warn you against traveling on a rainy day. This is due to the appearance of impassability, thereby there is a danger of climbing. Plus, there are quite narrow paths and paths in that area, which soften and blur.\n\n\nThe easiest way to get to the attraction is to go on an excursion from the city of Karakol. But you can make such a trip yourself if you know the right way."
+        },
+        "cover": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1AbH4aHBOWvZPbptHMoVL0"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7akLDjZ92esYCrZS8o1h8r"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "19sDPKRVmL3hmmSLkoq7oA",
+        "type": "Entry",
+        "createdAt": "2024-06-05T16:45:28.097Z",
+        "updatedAt": "2024-06-05T16:46:28.300Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-06-05T16:46:28.300Z",
+        "firstPublishedAt": "2024-06-05T16:46:28.300Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "attractions"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/19sDPKRVmL3hmmSLkoq7oA"
+      },
+      "fields": {
+        "title_ru": {
+          "en": "Горное озеро Святое"
+        },
+        "title_ky": {
+          "en": "Ыйык тоо көлү"
+        },
+        "title_en": {
+          "en": "Holy Mountain Lake"
+        },
+        "description_ru": {
+          "en": "Располагается данная примечательность в северной части Кыргызстана, в объятиях вершины Тянь-Шань, неподалёку от известного курорта Иссык-Куль. Хоть это и озеро, но по размерам напоминает скорее пруд, только окутанный скалами, елями и прочим растительным миром. Но, не смотря на это, озеро всё равно поражает своим пейзажем.\n\n\nВозле данного озера также располагается Семёновское ущелье. Самое интересное то, что данный водоём располагается на очень большой высоте, что, пожалуй, и придает ему столь живописные пейзажи. Как утверждаю, местные жители данный водоем обладает целебными свойствами, может, поэтому его прозвали «Святым»."
+        },
+        "description_ky": {
+          "en": "Бул өзгөчөлүк Кыргызстандын түндүк бөлүгүндө, белгилүү Ысык-Көл курортуна жакын Тянь-Шань чокусунун кучагында жайгашкан. Бул көл болсо да, бирок, тескерисинче, бир гана таш, карагай жана башка өсүмдүктөр дүйнөсү менен капталган көлмөгө окшош. Бирок, буга карабастан, Көл өзүнүн пейзажы менен дагы деле таң калтырат.\n\n\nБул Көлдүн жанында Семенов капчыгайы да жайгашкан. Эң кызыгы, бул суу объектиси өтө бийиктикте жайгашкан,бул ага ушунчалык кооз пейзаждарды берет. Жергиликтүү тургундардын айтымында, бул көлмөнүн дарылык касиети бар, ошондуктан аны \"ыйык\"деп атап коюшкандыр."
+        },
+        "description_en": {
+          "en": "This landmark is located in the northern part of Kyrgyzstan, in the embrace of the Tien Shan peak, near the famous Issyk-Kul resort. Although it is a lake, it is more like a pond in size, only shrouded in rocks, fir trees and other flora. But, despite this, the lake still impresses with its landscape.\n\n\nThe Semenov Gorge is also located near this lake. The most interesting thing is that this reservoir is located at a very high altitude, which, perhaps, gives it such picturesque landscapes. According to the locals, this reservoir has healing properties, maybe that's why it was nicknamed \"Holy\"."
+        },
+        "cover": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5djq5XoF88TdokLw3AW6oH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6DjXRweXheMBUJ9eTt0iZt"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "KFGjn7prbPYN8enkhV3Uq",
+        "type": "Entry",
+        "createdAt": "2024-06-05T16:50:06.478Z",
+        "updatedAt": "2024-06-05T16:50:59.359Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-06-05T16:50:59.359Z",
+        "firstPublishedAt": "2024-06-05T16:50:59.359Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "attractions"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/KFGjn7prbPYN8enkhV3Uq"
+      },
+      "fields": {
+        "title_ru": {
+          "en": "Горное плато Кумтор"
+        },
+        "title_ky": {
+          "en": "Кумтөр тоо платосу"
+        },
+        "title_en": {
+          "en": "Kumtor Mountain Plateau"
+        },
+        "description_ru": {
+          "en": "Располагается данное плато возле горного хребта Тянь-Шань, это недалеко от озера Иссык-куль. Данная достопримечательность полностью окутана снежными вершинами, каждая из которых высотой минимум 6500 метров. Стоит отметить, что данные ледники летом тают, благодаря этому на данных вершинах образуется огромное количество ручейков и озер. Занимательный факт: природный климат здесь неустойчив, в том плане, что внезапно может начаться дождь, или же пойти снег, бывали случаи снег с градом, или с дождем, но, несмотря на это, на побережье озера Иссык-куль неимоверно жарко, +30 в тени.\n\n\nВ данной местности вы сможете попробовать множество развлечений"
+        },
+        "description_ky": {
+          "en": "Бул плато Тянь-Шань тоо кыркаларынын жанында жайгашкан, бул Ысык-Көлгө жакын. Бул аттракцион толугу менен карлуу чокуларга оролгон, алардын ар биринин бийиктиги кеминде 6500 метр. Белгилей кетсек, бул мөңгүлөр жайында эрийт, мунун аркасында бул чокуларда көп сандаган Дарыялар жана көлдөр пайда болот. Көңүл ачуучу факт: бул жерде жаратылыш климаты Туруксуз, капысынан жамгыр жаашы, же кар жаашы мүмкүн, мөндүр же жамгыр жааган учурлар болгон, бирок ага карабастан Ысык-Көлдүн жээгинде көлөкөдө +30 укмуштуудай Ысык.\n\n\nБул аймакта сиз аракет кыла турган көптөгөн иш-чаралар бар"
+        },
+        "description_en": {
+          "en": "This plateau is located near the Tien Shan mountain range, it is not far from Lake Issyk-Kul. This landmark is completely shrouded in snowy peaks, each of which is at least 6500 meters high. It is worth noting that these glaciers melt in summer, due to this, a huge number of streams and lakes are formed on these peaks. An interesting fact: the natural climate here is unstable, in the sense that it may suddenly rain or snow, there have been cases of snow with hail or rain, but despite this, it is incredibly hot on the shore of Lake Issyk-Kul, +30 in the shade.\n\n\nIn this area you can try a lot of entertainment"
+        },
+        "cover": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "71tG6SCTNGcAz0qMrAFn4"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1u9BQ4jYcbUlYd2zX0NhTu"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "6pJjlIi0aAjFfQfieGTQMF",
+        "type": "Entry",
+        "createdAt": "2024-06-05T16:51:05.223Z",
+        "updatedAt": "2024-06-05T16:51:58.187Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-06-05T16:51:58.187Z",
+        "firstPublishedAt": "2024-06-05T16:51:58.187Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "attractions"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/6pJjlIi0aAjFfQfieGTQMF"
+      },
+      "fields": {
+        "title_ru": {
+          "en": "Каньон Сказка"
+        },
+        "title_ky": {
+          "en": "Каньон Жомогу"
+        },
+        "title_en": {
+          "en": "Fairy Tale Canyon"
+        },
+        "description_ru": {
+          "en": "Данная достопримечательность располагается на южном берегу Киргизского озера. С первого взгляда он может показаться не очень-то и примечательным, однако первое впечатление является ошибочным. Стоит вам пройтись немного вглубь каньона, поодаль от проезжей части, пред вами появится абсолютно другой пейзаж.\n\n\nНесмотря на необычность каньона, о нем не сложены легенды, как могло бы быть, собственно сам по себе, он стал известен сравнительно недавно, и не несет в себе никакой ценности, за исключением туристической."
+        },
+        "description_ky": {
+          "en": "Бул ажайып жай Кыргыз көлүнүн түштүк жээгинде жайгашкан. Бир караганда, ал абдан жана көрүнүктүү сезилиши мүмкүн, бирок, биринчи таасир туура эмес болуп саналат. Сиз каньонго бир аз тереңирээк барышыңыз керек, жолдон алыс, сиз таптакыр башка пейзажды көрөсүз.\n\n\nКаньондун өзгөчөлүгүнө карабастан, ал жөнүндө уламыштар түзүлбөйт, анткени ал жакында эле белгилүү болуп калды жана туристтиктен башка эч кандай баалуулукка ээ эмес."
+        },
+        "description_en": {
+          "en": "This landmark is located on the southern shore of the Kyrgyz Lake. At first glance, it may not seem very remarkable, but the first impression is erroneous. Once you walk a little deeper into the canyon, away from the roadway, a completely different landscape will appear in front of you.\n\n\nDespite the unusual nature of the canyon, there are no legends about it, as it could be, in fact, by itself, it became known relatively recently, and does not carry any value, except for the tourist one."
+        },
+        "cover": {
+          "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "DqApWcPygHvZWisl5edHD"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6gkC5t1dn1MBKSKsbDkKG5"
               }
             }
           ]
@@ -3982,6 +4755,882 @@
             },
             "fileName": "unnamed (5) 1.png",
             "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "7KZVirrHiofIQppTk0Ntif",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:34:29.423Z",
+        "updatedAt": "2024-06-05T16:34:58.304Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-05T16:34:58.304Z",
+        "firstPublishedAt": "2024-06-05T16:34:58.304Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/7KZVirrHiofIQppTk0Ntif"
+      },
+      "fields": {
+        "title": {
+          "en": "boomskoe-ushchele-1"
+        },
+        "description": {
+          "en": ""
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/7KZVirrHiofIQppTk0Ntif/fe48ad44201648ffe0e173ddda8464e5/boomskoe-ushchele-1.webp",
+            "details": {
+              "size": 92174,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "boomskoe-ushchele-1.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "5AnpQq1dSaobysDvKOksaj",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:35:13.815Z",
+        "updatedAt": "2024-06-05T16:35:27.724Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-05T16:35:27.724Z",
+        "firstPublishedAt": "2024-06-05T16:35:27.724Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/5AnpQq1dSaobysDvKOksaj"
+      },
+      "fields": {
+        "title": {
+          "en": "boomskoe-ushchele-2"
+        },
+        "description": {
+          "en": ""
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/5AnpQq1dSaobysDvKOksaj/45febb3e91df8a0231fb60ea36605768/boomskoe-ushchele-2.webp",
+            "details": {
+              "size": 90562,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "boomskoe-ushchele-2.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "3S59Jfjvla2LYkwKl9usAO",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:35:32.851Z",
+        "updatedAt": "2024-06-05T16:35:45.927Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-05T16:35:45.927Z",
+        "firstPublishedAt": "2024-06-05T16:35:45.927Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/3S59Jfjvla2LYkwKl9usAO"
+      },
+      "fields": {
+        "title": {
+          "en": "boomskoe-ushchele-3"
+        },
+        "description": {
+          "en": ""
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/3S59Jfjvla2LYkwKl9usAO/ddae2a5a55359ea39243bd783e2f3ec9/boomskoe-ushchele-3.webp",
+            "details": {
+              "size": 89508,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "boomskoe-ushchele-3.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "6h0FJADSG8HkTZGoE8ZUgP",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:35:50.700Z",
+        "updatedAt": "2024-06-05T16:36:02.494Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-05T16:36:02.494Z",
+        "firstPublishedAt": "2024-06-05T16:36:02.494Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/6h0FJADSG8HkTZGoE8ZUgP"
+      },
+      "fields": {
+        "title": {
+          "en": "boomskoe-ushchele-4"
+        },
+        "description": {
+          "en": ""
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/6h0FJADSG8HkTZGoE8ZUgP/50fb6520c5d3e05e66221ffe9bb0e5e0/boomskoe-ushchele-4.webp",
+            "details": {
+              "size": 85672,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "boomskoe-ushchele-4.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "7akLDjZ92esYCrZS8o1h8r",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:41:21.706Z",
+        "updatedAt": "2024-06-05T16:43:11.884Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:43:11.884Z",
+        "firstPublishedAt": "2024-06-05T16:43:11.884Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/7akLDjZ92esYCrZS8o1h8r"
+      },
+      "fields": {
+        "title": {
+          "en": "dbzewakxcaaa0qz"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/7akLDjZ92esYCrZS8o1h8r/f7f3793b910edb1454ff7c9501f744f7/dbzewakxcaaa0qz.jpg",
+            "details": {
+              "size": 337039,
+              "image": {
+                "width": 1200,
+                "height": 801
+              }
+            },
+            "fileName": "dbzewakxcaaa0qz.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "1AbH4aHBOWvZPbptHMoVL0",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:41:21.707Z",
+        "updatedAt": "2024-06-05T16:43:06.782Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:43:06.782Z",
+        "firstPublishedAt": "2024-06-05T16:43:06.782Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/1AbH4aHBOWvZPbptHMoVL0"
+      },
+      "fields": {
+        "title": {
+          "en": "c sergey kalachov 7"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/1AbH4aHBOWvZPbptHMoVL0/db5a87f73798e5ade9b91be208938f95/c_sergey_kalachov_7.jpg",
+            "details": {
+              "size": 1307420,
+              "image": {
+                "width": 1200,
+                "height": 800
+              }
+            },
+            "fileName": "c_sergey_kalachov_7.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "6DjXRweXheMBUJ9eTt0iZt",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:45:02.429Z",
+        "updatedAt": "2024-06-05T16:45:21.142Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:45:21.142Z",
+        "firstPublishedAt": "2024-06-05T16:45:21.142Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/6DjXRweXheMBUJ9eTt0iZt"
+      },
+      "fields": {
+        "title": {
+          "en": "gornoe-ozero-svyatoe-1"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/6DjXRweXheMBUJ9eTt0iZt/4f569d462299b2a68c864fcbc6a49d29/gornoe-ozero-svyatoe-1.jpg",
+            "details": {
+              "size": 259753,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "gornoe-ozero-svyatoe-1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "5djq5XoF88TdokLw3AW6oH",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:45:02.448Z",
+        "updatedAt": "2024-06-05T16:45:21.146Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:45:21.146Z",
+        "firstPublishedAt": "2024-06-05T16:45:21.146Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/5djq5XoF88TdokLw3AW6oH"
+      },
+      "fields": {
+        "title": {
+          "en": "gornoe-ozero-svyatoe-3"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/5djq5XoF88TdokLw3AW6oH/d04fd8814e4906bc17966bab7b2e7438/gornoe-ozero-svyatoe-3.webp",
+            "details": {
+              "size": 48766,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "gornoe-ozero-svyatoe-3.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "1u9BQ4jYcbUlYd2zX0NhTu",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:47:33.800Z",
+        "updatedAt": "2024-06-05T16:48:45.069Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:48:45.069Z",
+        "firstPublishedAt": "2024-06-05T16:48:45.069Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/1u9BQ4jYcbUlYd2zX0NhTu"
+      },
+      "fields": {
+        "title": {
+          "en": "gornoe-plato-kumtor-3"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/1u9BQ4jYcbUlYd2zX0NhTu/9a11d0c06cdcbaa3e66d6c30f4088371/gornoe-plato-kumtor-3.webp",
+            "details": {
+              "size": 93588,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "gornoe-plato-kumtor-3.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "71tG6SCTNGcAz0qMrAFn4",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:47:33.826Z",
+        "updatedAt": "2024-06-05T16:48:45.073Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:48:45.073Z",
+        "firstPublishedAt": "2024-06-05T16:48:45.073Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/71tG6SCTNGcAz0qMrAFn4"
+      },
+      "fields": {
+        "title": {
+          "en": "gornoe-plato-kumtor-2"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/71tG6SCTNGcAz0qMrAFn4/e557d04ebab20175f569f4ff646c3fa7/gornoe-plato-kumtor-2.webp",
+            "details": {
+              "size": 70396,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "gornoe-plato-kumtor-2.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "DqApWcPygHvZWisl5edHD",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:49:17.276Z",
+        "updatedAt": "2024-06-05T16:49:48.779Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:49:48.779Z",
+        "firstPublishedAt": "2024-06-05T16:49:48.779Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/DqApWcPygHvZWisl5edHD"
+      },
+      "fields": {
+        "title": {
+          "en": "kanon-skazka-2"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/DqApWcPygHvZWisl5edHD/2f440ea6fbbc6d3fd095ca4e4851f4de/kanon-skazka-2.webp",
+            "details": {
+              "size": 81330,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "kanon-skazka-2.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "6gkC5t1dn1MBKSKsbDkKG5",
+        "type": "Asset",
+        "createdAt": "2024-06-05T16:49:17.277Z",
+        "updatedAt": "2024-06-05T16:49:48.776Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2024-06-05T16:49:48.776Z",
+        "firstPublishedAt": "2024-06-05T16:49:48.776Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/6gkC5t1dn1MBKSKsbDkKG5"
+      },
+      "fields": {
+        "title": {
+          "en": "kanon-skazka-1"
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/6gkC5t1dn1MBKSKsbDkKG5/2edfae8f475cb229f6734cdd5c490874/kanon-skazka-1.webp",
+            "details": {
+              "size": 68242,
+              "image": {
+                "width": 730,
+                "height": 487
+              }
+            },
+            "fileName": "kanon-skazka-1.webp",
+            "contentType": "image/webp"
           }
         }
       }
