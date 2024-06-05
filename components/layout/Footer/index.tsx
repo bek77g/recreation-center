@@ -64,7 +64,7 @@ export function Footer({}: IFooter) {
     <footer className="bg-[#2a2a2a] text-white pt-14 pb-10">
       <div className="container grid text-center sm:text-left grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center gap-16">
         <div>
-          <h3 className="mb-6">
+          <h3 className="mb-6 w-fit mx-auto sm:w-auto">
             <Logo />
           </h3>
           <ul className="flex flex-col gap-y-2">
@@ -91,7 +91,7 @@ export function Footer({}: IFooter) {
         </div>
         <div>
           <h3 className="font-playfair text-[24px] mb-6">{t('Footer.socials.title')}</h3>
-          <ul className="flex flex-col gap-y-4">
+          <ul className="flex flex-col gap-y-4 w-fit mx-auto sm:w-auto">
             {socials.map((social) => (
               <li key={social.href} className="flex items-center gap-2">
                 {social.icon} <a href={social.href}>{social.label}</a>
@@ -100,7 +100,7 @@ export function Footer({}: IFooter) {
           </ul>
         </div>
       </div>
-      <p className="container text-[#909090] mt-8">{t('Footer.copyright', { year, copyright })}</p>
+      <p className="container text-[#909090] !mt-8">{t('Footer.copyright', { year, copyright })}</p>
     </footer>
   );
 }
