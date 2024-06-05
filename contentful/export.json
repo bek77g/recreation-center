@@ -792,6 +792,158 @@
           }
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "general",
+        "type": "ContentType",
+        "createdAt": "2024-06-05T19:14:54.195Z",
+        "updatedAt": "2024-06-05T19:25:52.240Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-06-05T19:25:52.240Z",
+        "firstPublishedAt": "2024-06-05T19:14:54.686Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/content_types/general"
+      },
+      "displayField": "address_ru",
+      "name": "General",
+      "description": "",
+      "fields": [
+        {
+          "id": "address_ru",
+          "name": "Address RU",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "address_ky",
+          "name": "Address KY",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "address_en",
+          "name": "Address EN",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "phone",
+          "name": "Phone",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "email",
+          "name": "Email",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "instagram",
+          "name": "Instagram",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "facebook",
+          "name": "Facebook",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "copyright",
+          "name": "Copyright",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -1267,6 +1419,92 @@
         {
           "fieldId": "cover",
           "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "0wvqwyal57dn",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-06-05T19:14:54.910Z",
+        "createdBy": {
+          "sys": {
+            "id": "5WPx3kxv4W60pNfeYCAXkM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-05T19:25:53.037Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5WPx3kxv4W60pNfeYCAXkM",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "general",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "address_ru",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "address_ky",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "address_en",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "phone",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "email",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "instagram",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facebook",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "copyright",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -2506,7 +2744,7 @@
         "id": "2UWDfbwiWqj76zEqsWULlM",
         "type": "Entry",
         "createdAt": "2024-06-04T16:39:53.400Z",
-        "updatedAt": "2024-06-04T16:53:02.202Z",
+        "updatedAt": "2024-06-05T18:16:41.097Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2514,8 +2752,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 16,
-        "publishedAt": "2024-06-04T16:53:02.202Z",
+        "publishedVersion": 19,
+        "publishedAt": "2024-06-05T18:16:41.097Z",
         "firstPublishedAt": "2024-06-04T16:41:34.208Z",
         "createdBy": {
           "sys": {
@@ -2531,8 +2769,8 @@
             "id": "5WPx3kxv4W60pNfeYCAXkM"
           }
         },
-        "publishedCounter": 3,
-        "version": 17,
+        "publishedCounter": 4,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2593,7 +2831,7 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "48Cd7nMMh0Top1liS5z5uJ"
+                "id": "3AK5zp2XrBCAiySuvUClMG"
               }
             },
             {
@@ -2625,7 +2863,7 @@
         "id": "48V1H1iw9HxV3pgDU1JlNm",
         "type": "Entry",
         "createdAt": "2024-06-04T16:41:37.234Z",
-        "updatedAt": "2024-06-04T18:27:38.849Z",
+        "updatedAt": "2024-06-05T18:17:04.316Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2633,8 +2871,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2024-06-04T18:27:38.849Z",
+        "publishedVersion": 25,
+        "publishedAt": "2024-06-05T18:17:04.316Z",
         "firstPublishedAt": "2024-06-04T16:43:49.559Z",
         "createdBy": {
           "sys": {
@@ -2650,8 +2888,8 @@
             "id": "5WPx3kxv4W60pNfeYCAXkM"
           }
         },
-        "publishedCounter": 2,
-        "version": 20,
+        "publishedCounter": 4,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2715,14 +2953,14 @@
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "1eFSPIr4EbX4bLLHumQcUd"
+                "id": "3AK5zp2XrBCAiySuvUClMG"
               }
             },
             {
               "sys": {
                 "type": "Link",
                 "linkType": "Asset",
-                "id": "3AK5zp2XrBCAiySuvUClMG"
+                "id": "5FeZhbH9kSppXVdxKU255j"
               }
             }
           ]
@@ -2868,7 +3106,7 @@
         "id": "3YkhLVyUJz79Pmd3tY9crW",
         "type": "Entry",
         "createdAt": "2024-06-05T16:41:27.482Z",
-        "updatedAt": "2024-06-05T16:43:16.402Z",
+        "updatedAt": "2024-06-05T17:37:48.190Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2876,8 +3114,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-06-05T16:43:16.402Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-06-05T17:37:48.190Z",
         "firstPublishedAt": "2024-06-05T16:43:16.402Z",
         "createdBy": {
           "sys": {
@@ -2893,8 +3131,8 @@
             "id": "5WPx3kxv4W60pNfeYCAXkM"
           }
         },
-        "publishedCounter": 1,
-        "version": 8,
+        "publishedCounter": 2,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2939,6 +3177,13 @@
         },
         "cover": {
           "en": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3JhfcWrRDxgFw1inaCmAx2"
+              }
+            },
             {
               "sys": {
                 "type": "Link",
@@ -3275,6 +3520,103 @@
               }
             }
           ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "1cTONSfonx2Kmg2gHYJMN5",
+        "type": "Entry",
+        "createdAt": "2024-06-05T19:15:39.696Z",
+        "updatedAt": "2024-06-05T19:17:15.508Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2024-06-05T19:17:15.508Z",
+        "firstPublishedAt": "2024-06-05T19:17:15.508Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "automationTags": [
+        ],
+        "fieldStatus": {
+          "*": {
+            "en": "published"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "general"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/entries/1cTONSfonx2Kmg2gHYJMN5"
+      },
+      "fields": {
+        "address_ru": {
+          "en": "страна Кыргызстан, Иссык-Кульская область"
+        },
+        "address_ky": {
+          "en": "өлкө Кыргызстан, Ысык-Көл облусу"
+        },
+        "address_en": {
+          "en": "country Kyrgyzstan, Issyk-Kul region"
+        },
+        "phone": {
+          "en": [
+            "+996701151539",
+            "+996707260568"
+          ]
+        },
+        "email": {
+          "en": [
+            "d.zheenkul@gmail.com"
+          ]
+        },
+        "instagram": {
+          "en": "_j_beknur_"
+        },
+        "facebook": {
+          "en": "issyk-kol.kg"
         }
       }
     }
@@ -4547,85 +4889,10 @@
             "id": "0wvqwyal57dn"
           }
         },
-        "id": "1eFSPIr4EbX4bLLHumQcUd",
-        "type": "Asset",
-        "createdAt": "2024-06-04T16:43:06.470Z",
-        "updatedAt": "2024-06-04T16:43:20.761Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2024-06-04T16:43:20.761Z",
-        "firstPublishedAt": "2024-06-04T16:43:20.761Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "5WPx3kxv4W60pNfeYCAXkM"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "5WPx3kxv4W60pNfeYCAXkM"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "5WPx3kxv4W60pNfeYCAXkM"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/1eFSPIr4EbX4bLLHumQcUd"
-      },
-      "fields": {
-        "title": {
-          "en": "gryazelechenie 1"
-        },
-        "description": {
-          "en": ""
-        },
-        "file": {
-          "en": {
-            "url": "//images.ctfassets.net/0wvqwyal57dn/1eFSPIr4EbX4bLLHumQcUd/3b85038f58a8304bdc11f03db29db561/gryazelechenie_1.png",
-            "details": {
-              "size": 212770,
-              "image": {
-                "width": 522,
-                "height": 426
-              }
-            },
-            "fileName": "gryazelechenie 1.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "0wvqwyal57dn"
-          }
-        },
         "id": "3AK5zp2XrBCAiySuvUClMG",
         "type": "Asset",
         "createdAt": "2024-06-04T16:43:31.392Z",
-        "updatedAt": "2024-06-04T16:43:43.093Z",
+        "updatedAt": "2024-06-05T18:10:46.626Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4633,8 +4900,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-06-04T16:43:43.093Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-06-05T18:10:46.626Z",
         "firstPublishedAt": "2024-06-04T16:43:43.093Z",
         "createdBy": {
           "sys": {
@@ -4650,8 +4917,8 @@
             "id": "5WPx3kxv4W60pNfeYCAXkM"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 3,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4663,7 +4930,7 @@
       },
       "fields": {
         "title": {
-          "en": "gryazelechenie 1"
+          "en": "kosmetologia 1"
         },
         "description": {
           "en": ""
@@ -4700,7 +4967,7 @@
         "id": "1I2C7nFGh1sOgQKIqjwB1y",
         "type": "Asset",
         "createdAt": "2024-06-04T16:44:24.197Z",
-        "updatedAt": "2024-06-04T16:44:35.221Z",
+        "updatedAt": "2024-06-05T18:10:36.677Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4708,8 +4975,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2024-06-04T16:44:35.221Z",
+        "publishedVersion": 5,
+        "publishedAt": "2024-06-05T18:10:36.677Z",
         "firstPublishedAt": "2024-06-04T16:44:35.221Z",
         "createdBy": {
           "sys": {
@@ -4725,8 +4992,8 @@
             "id": "5WPx3kxv4W60pNfeYCAXkM"
           }
         },
-        "publishedCounter": 1,
-        "version": 4,
+        "publishedCounter": 2,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4738,7 +5005,7 @@
       },
       "fields": {
         "title": {
-          "en": "unnamed (5) 1"
+          "en": "gryazelechenie 2"
         },
         "description": {
           "en": ""
@@ -5631,6 +5898,156 @@
             },
             "fileName": "kanon-skazka-1.webp",
             "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "3JhfcWrRDxgFw1inaCmAx2",
+        "type": "Asset",
+        "createdAt": "2024-06-05T17:37:17.856Z",
+        "updatedAt": "2024-06-05T17:37:28.803Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-05T17:37:28.803Z",
+        "firstPublishedAt": "2024-06-05T17:37:28.803Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/3JhfcWrRDxgFw1inaCmAx2"
+      },
+      "fields": {
+        "title": {
+          "en": "vodopad-devichi-slezy-1"
+        },
+        "description": {
+          "en": ""
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/3JhfcWrRDxgFw1inaCmAx2/bc8035127ff91dd815a4e9d8962322ae/vodopad-devichi-slezy-1.webp",
+            "details": {
+              "size": 165298,
+              "image": {
+                "width": 898,
+                "height": 518
+              }
+            },
+            "fileName": "vodopad-devichi-slezy-1.webp",
+            "contentType": "image/webp"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "0wvqwyal57dn"
+          }
+        },
+        "id": "5FeZhbH9kSppXVdxKU255j",
+        "type": "Asset",
+        "createdAt": "2024-06-05T18:01:42.959Z",
+        "updatedAt": "2024-06-05T18:10:54.981Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-06-05T18:10:54.981Z",
+        "firstPublishedAt": "2024-06-05T18:01:54.348Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5WPx3kxv4W60pNfeYCAXkM"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/0wvqwyal57dn/environments/master/assets/5FeZhbH9kSppXVdxKU255j"
+      },
+      "fields": {
+        "title": {
+          "en": "kosmetologia 2"
+        },
+        "description": {
+          "en": ""
+        },
+        "file": {
+          "en": {
+            "url": "//images.ctfassets.net/0wvqwyal57dn/5FeZhbH9kSppXVdxKU255j/326e006607ff454c422a1ea7d1c46e18/unnamed__5__1.png",
+            "details": {
+              "size": 313404,
+              "image": {
+                "width": 522,
+                "height": 426
+              }
+            },
+            "fileName": "unnamed (5) 1.png",
+            "contentType": "image/png"
           }
         }
       }

@@ -1,10 +1,13 @@
 import { Logo } from '@/components/ui';
 import { ROUTES } from '@/constants/links.constants';
+import { TypeGeneralFields } from '@/types/contentful';
 import { Facebook, Instagram } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 
-interface IFooter {}
+interface IFooter {
+  data: TypeGeneralFields[];
+}
 
 const navigation: { title: string; href: string }[] = [
   {
@@ -53,12 +56,17 @@ const socials: { icon: any; href: string; label: string }[] = [
   },
 ];
 
-export function Footer({}: IFooter) {
+export function Footer({ data }: IFooter) {
   const t = useTranslations();
   const locale = useLocale();
 
+  const generalData = data[0];
+
   const year = new Date().getFullYear();
-  const copyright = 'Zheenkulov Beknur';
+
+  const copyright = generalData.copyright;
+  const facebook = generalData.facebook;
+  const instagram = generalData.instagram;
 
   return (
     <footer className="bg-[#2a2a2a] text-white pt-14 pb-10">
@@ -82,9 +90,14 @@ export function Footer({}: IFooter) {
         <div>
           <h3 className="font-playfair text-[24px] mb-6">{t('Footer.contacts.title')}</h3>
           <ul className="flex flex-col gap-y-4">
-            {contacts.map((item) => (
-              <li key={item.value}>
-                <a href={`${item.type}:${item.value}`}>{item.value}</a>
+            {generalData.phone.map((item) => (
+              <li key={item}>
+                <a href={`tel:${item}`}>{item}</a>
+              </li>
+            ))}
+            {generalData.email.map((item) => (
+              <li key={item}>
+                <a href={`email:${item}`}>{item}</a>
               </li>
             ))}
           </ul>
@@ -92,11 +105,14 @@ export function Footer({}: IFooter) {
         <div>
           <h3 className="font-playfair text-[24px] mb-6">{t('Footer.socials.title')}</h3>
           <ul className="flex flex-col gap-y-4 w-fit mx-auto sm:w-auto">
-            {socials.map((social) => (
-              <li key={social.href} className="flex items-center gap-2">
-                {social.icon} <a href={social.href}>{social.label}</a>
-              </li>
-            ))}
+            <li className="flex items-center gap-2">
+              <Facebook />
+              <a href={`https://facebook.com/${facebook}`}>{facebook}</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Instagram />
+              <a href={`https://instagram.com/${instagram}`}>{instagram}</a>
+            </li>
           </ul>
         </div>
       </div>

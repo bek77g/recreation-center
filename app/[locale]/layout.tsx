@@ -7,6 +7,7 @@ import { getMessages } from 'next-intl/server';
 
 import '@/app/globals.css';
 import { Fancybox } from '@/components/ui';
+import { getGeneralData } from '@/utils/fetch';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -24,6 +25,7 @@ export default async function BaseLayout({
   params: { locale: string };
 }) {
   const messages = await getMessages();
+  const generalData = await getGeneralData();
 
   return (
     <html lang={locale}>
@@ -35,7 +37,7 @@ export default async function BaseLayout({
               <Fancybox>{children}</Fancybox>
             </main>
             <WhatsAppFloating text="Здравствуйте" phone="+996701151539" />
-            <Footer />
+            <Footer data={generalData} />
           </NextIntlClientProvider>
         </AntdRegistry>
       </body>
