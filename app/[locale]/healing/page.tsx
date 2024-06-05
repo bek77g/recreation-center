@@ -4,8 +4,7 @@ import { NO_INDEX_PAGE } from '@/constants/seo.constants';
 import { TypeHealingFields } from '@/types/contentful';
 import { getHealings } from '@/utils/fetch';
 import { Metadata } from 'next';
-import { useLocale } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
@@ -15,7 +14,9 @@ export const metadata: Metadata = {
 
 export default async function HealingPage() {
   const t = await getTranslations('Sections');
-  const locale = useLocale();
+  const locale = await getLocale();
+  console.log(locale);
+
   const healingData: TypeHealingFields[] = await getHealings();
 
   return (

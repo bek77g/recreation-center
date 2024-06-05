@@ -3,6 +3,7 @@ import { NO_INDEX_PAGE } from '@/constants/seo.constants';
 import { TypeAttractionsFields } from '@/types/contentful';
 import { getAttractions } from '@/utils/fetch';
 import { useLocale } from 'next-intl';
+import { getLocale } from 'next-intl/server';
 import Image from 'next/image';
 
 const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
@@ -197,7 +198,7 @@ export const metadata: Metadata = {
 };
 
 export default async function AttractionsPage() {
-  const locale = useLocale();
+  const locale = await getLocale();
   const attractionsData: TypeAttractionsFields[] = await getAttractions();
 
   return (
