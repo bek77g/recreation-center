@@ -16,7 +16,7 @@ export function Header({}: IHeader) {
   const locale = useLocale();
   const pathname = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const [isTablet, setIsTablet] = useState(false);
+  const [isTablet, setIsTablet] = useState(window.innerWidth <= 796);
   const [isSticky, setIsSticky] = useState(false);
   const windowWidth = useWindowWidth();
 
