@@ -58,6 +58,15 @@ export const getAttractions = async () => {
     .reduce((acc, rec) => [...acc, rec.fields], []);
 };
 
+export const getAttractionBySlug = async (slug) => {
+  const res = await client.getEntries({
+    'content_type': 'attractions',
+    'fields.slug': slug,
+  });
+
+  return res.items.reduce((acc, rec) => [...acc, rec.fields], []);
+};
+
 export const postApplicationForm = async (body) => {
   const res = await clientManagement();
   const data = await res.createEntry('application', {
