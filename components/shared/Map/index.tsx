@@ -4,18 +4,18 @@ import { load } from '@2gis/mapgl';
 import { useEffect } from 'react';
 
 interface MapProps {
-  latitude: number;
   longitude: number;
+  latitude: number;
   zoom: number;
   className?: string;
 }
 
-export const Map = ({ latitude = 0, longitude = 0, zoom = 13, className }: MapProps) => {
+export const Map = ({ longitude = 0, latitude = 0, zoom = 13, className }: MapProps) => {
   useEffect(() => {
     let map;
     load().then((mapglAPI) => {
       map = new mapglAPI.Map('map-container', {
-        center: [latitude, longitude],
+        center: [longitude, latitude],
         zoom,
         key: process.env.NEXT_2GIS_API_KEY,
       });
