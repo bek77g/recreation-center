@@ -3,6 +3,9 @@
     "sup": "Pearl",
     "title": "Issyk-Kul"
   },
+  "Notfound": {
+    "text": "There's nothing here."
+  },
   "Actions": {
     "more": "More"
   },
