@@ -1,15 +1,35 @@
-export function Map() {
+'use client';
+
+import { load } from '@2gis/mapgl';
+import { useEffect } from 'react';
+
+interface MapProps {
+  latitude: number;
+  longitude: number;
+  zoom: number;
+  className?: string;
+}
+
+export const Map = ({ latitude = 0, longitude = 0, zoom = 13, className }: MapProps) => {
+  useEffect(() => {
+    let map;
+    load().then((mapglAPI) => {
+      map = new mapglAPI.Map('map-container', {
+        center: [latitude, longitude],
+        zoom,
+        key: process.env.NEXT_2GIS_API_KEY,
+      });
+    });
+
+    return () => map && map.destroy();
+  }, []);
+
   return (
-    <div className="py-24">
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?ll=77.569310%2C42.441627&z=9.71"
-        loading="lazy"
-        width="100%"
-        height="500px"
-        frameborder="1"
-        allowfullscreen="true"
-        style={{ position: 'relative' }}
-      />
+    <div
+      style={{ height: '100%', width: '100%' }}
+      className={`${!latitude || !longitude ? 'hidden' : ''} ${className}`}
+    >
+      <div id="map-container" style={{ height: '100%', width: '100%' }} />
     </div>
   );
-}
+};

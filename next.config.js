@@ -12,6 +12,7 @@ const nextConfig = {
     NEXT_CONTENTFUL_ACCESS_TOKEN: process.env.NEXT_CONTENTFUL_ACCESS_TOKEN,
     NEXT_CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN:
       process.env.NEXT_CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN,
+    NEXT_2GIS_API_KEY: process.env.NEXT_2GIS_API_KEY,
   },
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],

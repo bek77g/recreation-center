@@ -7,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Map />;
+  return (
+    <div className="pt-[90px]">
+      <Map latitude={77.331153} longitude={42.457736} zoom={8} className="w-screen" />
+    </div>
+  );
 }
