@@ -3,9 +3,31 @@ import { Map } from '@/components/shared';
 import { TypeAttractionsFields } from '@/types/contentful';
 import { getAttractionBySlug, getAttractions } from '@/utils/fetch';
 import { getLocale, getTranslations } from 'next-intl/server';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+
+export async function generateMetadata({ params }) {
+  const data = await getAttractionBySlug(params.slug);
+  const locale = await getLocale();
+
+  const product = data[0];
+  const title = product[`title_${locale}`];
+  const description = product[`description_${locale}`];
+  const image = product.cover[0].fields.file?.url;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [{ url: image, width: 800, height: 600 }],
+    },
+  };
+}
+
 export default async function AttractionDetailPage({ params }) {
   const t = await getTranslations('Navigation');
   const locale = await getLocale();
@@ -16,6 +38,9 @@ export default async function AttractionDetailPage({ params }) {
 
   return (
     <>
+      <Head>
+        <title>{data[0][`title_${locale}`]}</title>
+      </Head>
       <div className="pt-14 w-full grid grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-9">
           <AttractionDetail data={data[0]} />

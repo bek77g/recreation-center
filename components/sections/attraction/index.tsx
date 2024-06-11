@@ -28,7 +28,7 @@ export const FourImageSection = ({ data }: { data: TypeAttractionsFields }) => {
         />
       </a>
       <article className="col-span-1 md:col-span-2">
-        <h2 className="section-title">
+        <h2 className="section-title text-[48px]">
           <Link href={`/${locale}/attractions/${data.slug}`}>{data[`title_${locale}`]}</Link>
         </h2>
         {descriptionArr.map((item, index) => (
@@ -96,7 +96,7 @@ export const ThreeImageSection = ({ data }: { data: TypeAttractionsFields }) => 
   return (
     <section className="container grid grid-cols-1 sm:grid-cols-4 md:grid-cols-10 gap-14 grid-y-10 !py-14">
       <article className="col-span-1 md:col-span-4">
-        <h2 className="section-title">
+        <h2 className="section-title text-[48px]">
           <Link href={`/${locale}/attractions/${data.slug}`}>{data[`title_${locale}`]}</Link>
         </h2>
         {descriptionArr.map((item, index) => (
@@ -178,7 +178,7 @@ export const TwoImageSection = ({ data, isEven }: { data: TypeAttractionsFields 
         />
       </a>
       <article className={`col-span-1 ${isEven ? 'order-[-1]' : ''}`}>
-        <h2 className="section-title">
+        <h2 className="section-title text-[48px]">
           <Link href={`/${locale}/attractions/${data.slug}`}>{data[`title_${locale}`]}</Link>
         </h2>
         {descriptionArr.map((item, index) => (
@@ -232,7 +232,7 @@ export const TwoImageSection2 = ({ data }: { data: TypeAttractionsFields }) => {
         />
       </a>
       <article className="col-span-1">
-        <h2 className="section-title">
+        <h2 className="section-title text-[48px]">
           <Link href={`/${locale}/attractions/${data.slug}`}>{data[`title_${locale}`]}</Link>
         </h2>
         {descriptionArr.map((item, index) => (
