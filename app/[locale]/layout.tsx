@@ -3,7 +3,7 @@ import { WhatsAppFloating } from '@/components/shared/WhatsAppFloating';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 
 import '@/app/globals.css';
 import { Fancybox } from '@/components/ui';
@@ -27,6 +27,8 @@ export default async function BaseLayout({
   const messages = await getMessages();
   const generalData = await getGeneralData();
 
+  const t = await getTranslations('Actions');
+
   return (
     <html lang={locale}>
       <body>
@@ -36,7 +38,7 @@ export default async function BaseLayout({
             <main>
               <Fancybox>{children}</Fancybox>
             </main>
-            <WhatsAppFloating text="Здравствуйте" phone="+996701151539" />
+            <WhatsAppFloating text={t('hello')} phone={generalData[0]?.phone[0]} />
             <Footer data={generalData} />
           </NextIntlClientProvider>
         </AntdRegistry>
