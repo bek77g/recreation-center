@@ -1,5 +1,4 @@
 import bgIntro from '@/assets/images/bg-healing.png';
-import healingSecond from '@/assets/images/healing-second.png';
 import { NO_INDEX_PAGE } from '@/constants/seo.constants';
 import { TypeHealingFields } from '@/types/contentful';
 import { getHealings } from '@/utils/fetch';
@@ -44,7 +43,7 @@ export default async function HealingPage() {
       {healingData.map((item, idx) => (
         <section
           className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center !mb-10"
-          key={item.list_en}
+          key={idx}
         >
           <Image
             className="col-span-1 w-full"
@@ -56,7 +55,7 @@ export default async function HealingPage() {
           />
           <Image
             className="col-span-1 w-full"
-            src={healingSecond.src}
+            src={`https:${item.cover[1].fields.file?.url}`}
             width="0"
             height="0"
             sizes="100vw"
