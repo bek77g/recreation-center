@@ -14,8 +14,6 @@ export default async function AttractionDetailPage({ params }) {
 
   if (!data[0]) return notFound();
 
-  console.log(data[0]);
-
   return (
     <>
       <div className="pt-14 w-full grid grid-cols-12 gap-4">
@@ -65,7 +63,13 @@ export default async function AttractionDetailPage({ params }) {
         </aside>
       </div>
       <div className="w-full mx-auto text-center container">
-        <Map latitude={data[0]?.location.lat} longitude={data[0]?.location.lon} zoom={15} />
+        <Map
+          title={data[0]?.title}
+          latitude={data[0]?.location?.lat}
+          longitude={data[0]?.location?.lon}
+          zoom={10}
+          className="min-h-[340px]"
+        />
       </div>
     </>
   );
