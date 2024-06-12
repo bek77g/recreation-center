@@ -34,7 +34,7 @@ export function ProvideSection({ data = [] }: IProvideSectionProps) {
                 />
               </a>
               <div className="w-full px-4">
-                <h4 className="font-bold [font-family:_var(--second-family)] [font-size:_clamp(18px,5vw,30px)]">
+                <h4 className="font-bold overflow-hidden [font-family:_var(--second-family)] [font-size:_clamp(18px,5vw,30px)]">
                   {item[`title_${locale}`]}
                 </h4>
                 <p>{item[`description_${locale}`]}</p>
@@ -64,7 +64,7 @@ export function ProvideSection({ data = [] }: IProvideSectionProps) {
                 />
               </a>
               <div className="w-2/3">
-                <h4 className="font-bold">{item[`title_${locale}`]}</h4>
+                <h4 className="font-bold overflow-hidden">{item[`title_${locale}`]}</h4>
                 <p>{item[`description_${locale}`]}</p>
               </div>
             </div>
