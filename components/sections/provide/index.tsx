@@ -60,7 +60,7 @@ export function ProvideSection({ data = [] }: IProvideSectionProps) {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-full h-full"
+                  className="w-full h-full object-cover"
                 />
               </a>
               <div className="w-2/3">
