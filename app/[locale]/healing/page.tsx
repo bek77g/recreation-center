@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default async function HealingPage() {
   const t = await getTranslations('Sections');
   const locale = await getLocale();
-  console.log(locale);
 
   const healingData: TypeHealingFields[] = await getHealings();
 

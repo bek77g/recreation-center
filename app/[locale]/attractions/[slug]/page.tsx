@@ -8,6 +8,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+export async function generateStaticParams() {
+  const attractionsData = await getAttractions();
+  return attractionsData.map((item) => ({ params: { slug: item.slug } }));
+}
+
 export async function generateMetadata({ params }) {
   const data = await getAttractionBySlug(params.slug);
   const locale = await getLocale();
