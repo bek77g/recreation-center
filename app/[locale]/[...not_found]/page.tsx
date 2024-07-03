@@ -1,7 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 
-export const revalidate = 86000;
-
 export default async function NotFound() {
   const t = await getTranslations('Notfound');
 
